@@ -1,0 +1,8 @@
+package org.galapagos.config;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration	// 설정 파일이니 분석해줘 스프링 !
+public class RootConfig {
+
+}

@@ -1,0 +1,10 @@
+127.0.0.1 - - [05/Sep/2023:11:36:20 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [05/Sep/2023:11:36:22 +0900] "GET /controller/ HTTP/1.1" 200 164
+0:0:0:0:0:0:0:1 - - [05/Sep/2023:11:39:38 +0900] "GET /controller/ HTTP/1.1" 200 164
+0:0:0:0:0:0:0:1 - - [05/Sep/2023:11:45:21 +0900] "GET /controller/ HTTP/1.1" 500 3807
+127.0.0.1 - - [05/Sep/2023:14:25:35 +0900] "GET / HTTP/1.1" 404 807
+127.0.0.1 - - [05/Sep/2023:14:45:14 +0900] "GET / HTTP/1.1" 404 807
+127.0.0.1 - - [05/Sep/2023:17:39:52 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [05/Sep/2023:17:39:52 +0900] "GET /controller/WEB-INF/classes/org/galapagos/config/WebConfig.java HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [05/Sep/2023:17:40:09 +0900] "GET /controller/WEB-INF/classes/org/galapagos/config/RootConfig.java HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [05/Sep/2023:17:40:21 +0900] "GET /controller/WEB-INF/classes/org/galapagos/controller/HomeController.java HTTP/1.1" 404 721
