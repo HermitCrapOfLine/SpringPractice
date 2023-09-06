@@ -1,0 +1,26 @@
+package org.galapagos.persistence;
+
+import java.sql.DriverManager;
+
+import org.junit.Test;
+
+public class JDBCTests {
+	static { 	// static 초기화 블럭
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	public void testConnection() {
+		String url = "jdbc:mysql://localhost:3307/glory_db";
+		try(Connection con = DriverManager.getConnection(url, "GLORY", "1234")){
+			log.info(con);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

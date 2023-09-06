@@ -1,0 +1,12 @@
+package org.galapagos.persistence;
+
+public class JDBCTests {
+	static { 	// static 초기화 블럭
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
