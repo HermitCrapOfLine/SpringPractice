@@ -13,10 +13,6 @@ import org.springframework.web.servlet.view.JstlView;
 
 public class ServletConfig implements WebMvcConfigurer{
 
-	
-	
-	
-
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/resources/**")
