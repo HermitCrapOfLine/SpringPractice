@@ -5,3 +5,14 @@
 
 9월 06, 2023 15:37:07.469 NEW SESSION
 9월 06, 2023 15:37:07.469 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+9월 11, 2023 16:10:47.534 NEW SESSION
+9월 11, 2023 16:10:47.534 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 11, 2023 16:42:40.953 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+9월 11, 2023 18:45:06.183 NEW SESSION
+9월 11, 2023 18:45:06.183 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+9월 11, 2023 19:54:26.869 NEW SESSION
+9월 11, 2023 19:54:26.869 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 11, 2023 19:54:49.816 [4480:7968:0911/195449.816:ERROR:device_event_log_impl.cc(222)] [19:54:49.815] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)

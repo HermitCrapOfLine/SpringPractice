@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="jstl"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
-		<item key="isRegEx" value="false"/>
+		<item key="isRegEx" value="true"/>
 		<list key="findhistory">
+			<item value="[^\u0009\u000A\u000D\u0020-\uD7FF\uE000-\uFFFD\u10000-\u10FFF]+"/>
 			<item value="jstl"/>
+			<item value="avatar"/>
+			<item value="main"/>
+			<item value="Ju"/>
+			<item value="junit"/>
+			<item value="juni"/>
+			<item value="j"/>
+			<item value="JUnit"/>
+			<item value="aspect"/>
 			<item value="Hika"/>
 			<item value="Hikari"/>
 			<item value="exclusion"/>
-			<item value="junit"/>
 			<item value="log4"/>
 			<item value="maven"/>
-			<item value="servlet"/>
 		</list>
 		<list key="replacehistory">
+			<item value="aaaaaa"/>
+			<item value=""/>
+			<item value="qa"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
@@ -28,10 +38,10 @@
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 	<section name="org.eclipse.jst.jsp.ui.internal.preferences.ui.JSPTemplatePreferencePage$JSPEditTemplateDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="-651"/>
-		<item key="DIALOG_Y_ORIGIN" value="-154"/>
-		<item key="DIALOG_WIDTH" value="1936"/>
-		<item key="DIALOG_HEIGHT" value="1048"/>
+		<item key="DIALOG_X_ORIGIN" value="-643"/>
+		<item key="DIALOG_Y_ORIGIN" value="-146"/>
+		<item key="DIALOG_WIDTH" value="1920"/>
+		<item key="DIALOG_HEIGHT" value="1032"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 </section>

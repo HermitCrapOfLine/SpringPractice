@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.galapagos.mapper.BoardMapper">
+	<select id="getList" resultType="org.galapagos.domain.BoardVO">
+		<![CDATA[
+		select * from tbl_board
+		]]>
+	</select>
+
+	<insert id="insert">
+		insert into tbl_board (title, content, writer)
+		values
+		(#{title}, #{content}, #{writer})
+	</insert>
+
+	<insert id="insertSelectKey">
+		insert into tbl_board (title, content, writer)
+		values
+		(#{title},
+		#{content}, #{writer})
+
+		<selectKey resultType="Long" keyProperty="bno"
+			keyColumn="bno" order="AFTER">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+
+
+</mapper>
