@@ -2,6 +2,7 @@ package org.galapagos.service;
 
 import java.util.List;
 
+import org.galapagos.criteria.Criteria;
 import org.galapagos.domain.BoardVO;
 import org.galapagos.mapper.BoardMapper;
 import org.springframework.stereotype.Service;
@@ -50,9 +51,9 @@ public class BoardServiceImp1 implements BoardService {
 	}
 
 	@Override
-	public List<BoardVO> getList() {
-		log.info("getList.......");
+	public List<BoardVO> getList(Criteria cri) {
+		log.info("get List with criteria: " + cri);
 		
-		return mapper.getList();
+		return mapper.getListWithPaging(cri);
 	}
 }

@@ -23,7 +23,6 @@
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="lombok.Data"/>
     <fullyQualifiedTypeName name="lombok.extern.log4j.Log4j"/>
-    <fullyQualifiedTypeName name="org.galapagos.domain.BoardVO"/>
     <fullyQualifiedTypeName name="org.galapagos.config.ServletConfig"/>
     <fullyQualifiedTypeName name="org.springframework.test.web.servlet.setup.MockMvcBuilders"/>
     <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
@@ -31,4 +30,6 @@
     <fullyQualifiedTypeName name="org.springframework.test.web.servlet.request.MockMvcRequestBuilders"/>
     <fullyQualifiedTypeName name="org.springframework.test.context.web.WebAppConfiguration"/>
     <fullyQualifiedTypeName name="org.junit.Before"/>
+    <fullyQualifiedTypeName name="org.galapagos.criteria.Criteria"/>
+    <fullyQualifiedTypeName name="org.galapagos.domain.BoardVO"/>
 </qualifiedTypeNameHistroy>

@@ -1,10 +1,9 @@
 package org.galapagos.service;
 
-import static org.junit.Assert.fail;
-
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
+import java.util.List;
 
 import org.galapagos.config.RootConfig;
+import org.galapagos.criteria.Criteria;
 import org.galapagos.domain.BoardVO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -67,7 +66,9 @@ public class BoardServiceTest {
 	@Test
 	public void testGetList() {
 		
-		for (BoardVO board : service.getList()) {
+		List<BoardVO> list = service.getList(new Criteria(2, 10));
+		
+		for (BoardVO board : list) {
 			log.info(board);
 		}
 	}

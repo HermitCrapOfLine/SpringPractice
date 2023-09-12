@@ -45,5 +45,15 @@
 			update_date = now()
 		where bno = #{bno}
 	</update>
+	
+	<select id="getListWithPaging" resultType="BoardVO">
+		<![CDATA[
+			select *
+			from tbl_board
+			order by bno desc
+			limit #{offset}, #{amount}
+		]]>
+	</select>	
+	
 
 </mapper>

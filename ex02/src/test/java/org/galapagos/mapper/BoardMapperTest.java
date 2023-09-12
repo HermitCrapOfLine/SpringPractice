@@ -3,6 +3,7 @@ package org.galapagos.mapper;
 import java.util.List;
 
 import org.galapagos.config.RootConfig;
+import org.galapagos.criteria.Criteria;
 import org.galapagos.domain.BoardVO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,7 +22,7 @@ public class BoardMapperTest {
 	@Autowired
 	private BoardMapper mapper;
 	
-	@Test
+//	@Test
 	public void testGetList() {
 		List<BoardVO> list = mapper.getList();
 		for (BoardVO b : list) {
@@ -30,7 +31,7 @@ public class BoardMapperTest {
 	}
 
 	
-	@Test
+//	@Test
 	public void testInsert() {
 		
 		BoardVO board = new BoardVO();
@@ -46,7 +47,7 @@ public class BoardMapperTest {
 
 	}
 	
-	@Test
+//	@Test
 	public void testRead() {
 		
 		BoardVO board = mapper.read(5L);
@@ -54,12 +55,12 @@ public class BoardMapperTest {
 		log.info(board);
 	}
 	
-	@Test
+//	@Test
 	public void testDelete() {
 		log.info("DELETE COUNT: " + mapper.delete(3L));
 	}
 
-	@Test
+//	@Test
 	public void testUpdate() {
 		
 		BoardVO board = new BoardVO();
@@ -72,5 +73,17 @@ public class BoardMapperTest {
 		
 		log.info("UPDATE COUNT: " + count);
 		
+	}
+	
+	@Test
+	public void testPaging() {
+		
+		Criteria cri = new Criteria(1, 5);
+		
+		List<BoardVO> list = mapper.getListWithPaging(cri);
+		
+		for (BoardVO board : list) {
+			log.info(board);
+		}
 	}
 }

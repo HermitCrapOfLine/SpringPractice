@@ -1,5 +1,6 @@
 package org.galapagos.controller;
 
+import org.galapagos.criteria.Criteria;
 import org.galapagos.domain.BoardVO;
 import org.galapagos.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +26,9 @@ public class BoardController {
 	private BoardService service;
 
 	@GetMapping("/list")
-	public void list(Model model) {
+	public void list(Criteria cri, Model model) {
 		log.info("list");
-		model.addAttribute("list", service.getList());
+		model.addAttribute("list", service.getList(cri));
 	}
 
 	@GetMapping("/register")
@@ -53,9 +54,12 @@ public class BoardController {
 	public String modify(BoardVO board, RedirectAttributes rttr) {
 		log.info("modify:" + board);
 		if (service.modify(board)) {
+			// Flash --> 1회성
 			rttr.addFlashAttribute("result", "success");
+			rttr.addAttribute("bno", board.getBno());
+			rttr.addAttribute("name", "hong");
 		}
-		return "redirect:/board/list";
+		return "redirect:/board/get";
 	}
 
 	@PostMapping("/remove")
