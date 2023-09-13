@@ -76,3 +76,41 @@
 9월 12, 2023 17:36:52.644 [5636:4396:0912/173652.644:ERROR:CONSOLE(1)] "Extension server error: Operation failed: Permission denied", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
 9월 12, 2023 17:37:21.791 [5636:4396:0912/173721.791:ERROR:CONSOLE(1)] "Cannot find context with specified id", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
 9월 12, 2023 17:37:21.792 [5636:4396:0912/173721.791:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: Cannot find context with specified id", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+
+9월 13, 2023 10:56:42.850 NEW SESSION
+9월 13, 2023 10:56:42.851 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 13, 2023 11:40:51.299 [2200:13408:0913/114051.299:ERROR:device_event_log_impl.cc(222)] [11:40:51.299] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+9월 13, 2023 13:38:26.215 [2200:13408:0913/133826.214:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+9월 13, 2023 13:38:26.216 [2200:13408:0913/133826.215:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 13, 2023 13:38:26.216 [2200:13408:0913/133826.215:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 13, 2023 13:38:33.242 [2200:13408:0913/133833.242:ERROR:CONSOLE(1)] "Cannot find context with specified id", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 13, 2023 13:38:33.242 [2200:13408:0913/133833.242:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: Cannot find context with specified id", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 13, 2023 14:30:47.233 [2200:13408:0913/143047.232:ERROR:CONSOLE(1)] "Cannot find context with specified id", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 13, 2023 14:30:47.233 [2200:13408:0913/143047.232:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: Cannot find context with specified id", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 13, 2023 14:40:49.183 [2200:13408:0913/144049.183:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+9월 13, 2023 14:40:49.183 [2200:13408:0913/144049.183:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 13, 2023 14:40:49.183 [2200:13408:0913/144049.183:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 13, 2023 14:44:16.356 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 13, 2023 14:50:13.199 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 13, 2023 15:21:00.833 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 13, 2023 15:27:45.996 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 13, 2023 16:04:18.902 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 13, 2023 16:09:12.788 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 13, 2023 16:13:50.15 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 13, 2023 17:36:55.800 [7748:18748:0913/173655.799:ERROR:device_event_log_impl.cc(222)] [17:36:55.799] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+9월 13, 2023 18:01:53.827 [7748:15644:0913/180153.827:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+9월 13, 2023 18:02:59.57 [7748:15644:0913/180259.057:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+9월 13, 2023 18:05:44.833 [7748:15644:0913/180544.832:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+9월 13, 2023 18:06:12.291 [7748:15644:0913/180612.290:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+9월 13, 2023 18:06:54.257 [7748:15644:0913/180654.257:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+9월 13, 2023 18:08:17.82 [7748:15644:0913/180817.082:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+9월 13, 2023 18:11:57.605 [7748:15644:0913/181157.605:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+9월 13, 2023 18:19:39.165 [7748:15644:0913/181939.164:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+9월 13, 2023 18:21:44.422 [7748:15644:0913/182144.422:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+9월 13, 2023 18:21:46.495 [7748:15644:0913/182146.495:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+9월 13, 2023 18:22:17.190 [7748:15644:0913/182217.189:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+9월 13, 2023 18:23:05.493 [7748:15644:0913/182305.493:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+9월 13, 2023 18:24:23.664 [7748:15644:0913/182423.664:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+9월 13, 2023 18:32:08.360 [7748:15644:0913/183208.359:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+9월 13, 2023 18:36:17.963 [7748:15644:0913/183617.962:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+9월 13, 2023 18:49:24.383 [7748:18748:0913/184924.383:ERROR:interface_endpoint_client.cc(702)] Message 0 rejected by interface blink.mojom.WidgetHost
