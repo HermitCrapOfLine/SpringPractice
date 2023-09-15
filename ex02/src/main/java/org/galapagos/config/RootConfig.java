@@ -15,6 +15,7 @@ import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration // 설정 파일이니 분석해줘 스프링 !
+// MyBatis가 MapperScan을 통해 mapper를 찾는다.
 @MapperScan(basePackages = { "org.galapagos.mapper" })
 @ComponentScan(basePackages = { "org.galapagos.service", "org.galapagos.controller" })
 public class RootConfig {

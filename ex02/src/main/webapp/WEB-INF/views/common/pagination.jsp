@@ -1,9 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<%@ include file="../layouts/header.jsp"%>
-<%-- 개별 페이지 --%>
-<h1>페이지 타이틀</h1>
 <div>
 <!-- 첫 페이지 이동 -->
 <ul class="pagination justify-content-center">

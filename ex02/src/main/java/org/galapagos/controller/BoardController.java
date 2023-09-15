@@ -20,7 +20,6 @@ import lombok.extern.log4j.Log4j;
 @Controller
 @Log4j
 @RequestMapping("/board")
-@AllArgsConstructor
 
 public class BoardController {
 
@@ -67,11 +66,11 @@ public class BoardController {
 		if (service.modify(board)) {
 			// Flash --> 1회성
 			rttr.addFlashAttribute("result", "success");
-			rttr.addAttribute("bno", board.getBno());
-			rttr.addAttribute("pageNum", cri.getPageNum());
-			rttr.addAttribute("amount", cri.getAmount());
-			rttr.addAttribute("type", cri.getType());
-			rttr.addAttribute("keyword", cri.getKeyword());
+//			rttr.addAttribute("bno", board.getBno());
+//			rttr.addAttribute("pageNum", cri.getPageNum());
+//			rttr.addAttribute("amount", cri.getAmount());
+//			rttr.addAttribute("type", cri.getType());
+//			rttr.addAttribute("keyword", cri.getKeyword());
 		}
 		return "redirect:" + cri.getLinkWithBno("/board/get", board.getBno());
 	}

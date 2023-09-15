@@ -114,3 +114,20 @@
 9월 13, 2023 18:32:08.360 [7748:15644:0913/183208.359:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
 9월 13, 2023 18:36:17.963 [7748:15644:0913/183617.962:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
 9월 13, 2023 18:49:24.383 [7748:18748:0913/184924.383:ERROR:interface_endpoint_client.cc(702)] Message 0 rejected by interface blink.mojom.WidgetHost
+
+9월 15, 2023 13:15:12.755 NEW SESSION
+9월 15, 2023 13:15:12.755 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 15, 2023 14:01:23.106 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 15, 2023 14:03:28.665 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 15, 2023 14:15:35.130 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 15, 2023 15:23:39.23 [7184:13520:0915/152339.018:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+9월 15, 2023 15:23:39.24 [7184:13520:0915/152339.023:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 15, 2023 15:23:39.26 [7184:13520:0915/152339.025:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 15, 2023 15:29:22.490 [7184:13520:0915/152922.490:ERROR:device_event_log_impl.cc(222)] [15:29:22.489] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+9월 15, 2023 16:07:51.942 [7184:13520:0915/160751.942:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+9월 15, 2023 16:07:51.948 [7184:13520:0915/160751.946:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 15, 2023 16:07:51.949 [7184:13520:0915/160751.946:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 15, 2023 16:40:06.244 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 15, 2023 17:31:23.70 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 15, 2023 17:46:55.181 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 15, 2023 17:50:25.303 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
