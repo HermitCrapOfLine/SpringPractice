@@ -2,6 +2,7 @@ package org.galapagos.domain;
 
 import org.galapagos.criteria.Criteria;
 
+
 import lombok.Data;
 
 @Data

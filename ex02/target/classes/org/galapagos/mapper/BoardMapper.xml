@@ -4,6 +4,27 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="org.galapagos.mapper.BoardMapper">
+
+	<sql id="criteria">
+		<trim prefixOverrides="OR">
+			<foreach item="type" collection="typeArr">
+				<trim prefix="OR">
+					<choose>
+						<when test="type == 'T'.toString()">
+							title like CONCAT('%', #{keyword}, '%')
+						</when>
+						<when test="type == 'C'.toString()">
+							content like CONCAT('%', #{keyword}, '%')
+						</when>
+						<when test="type == 'W'.toString()">
+							writer like CONCAT('%', #{keyword}, '%')
+						</when>
+					</choose>
+				</trim>
+			</foreach>
+		</trim>
+	</sql>
+
 	<select id="getList" resultType="BoardVO">
 		<![CDATA[
 		select * from tbl_board 
@@ -14,12 +35,14 @@
 
 	<insert id="insert">
 		insert into tbl_board (title, content, writer)
-		values (#{title}, #{content}, #{writer})
+		values
+		(#{title}, #{content}, #{writer})
 	</insert>
 
 	<insert id="insertSelectKey">
 		insert into tbl_board (title, content, writer)
-		values (#{title}, #{content}, #{writer})
+		values (#{title},
+		#{content}, #{writer})
 
 		<selectKey resultType="Long" keyProperty="bno"
 			keyColumn="bno" order="AFTER">
@@ -29,7 +52,8 @@
 
 
 	<select id="read" resultType="BoardVO">
-		select * from tbl_board where bno = #{bno}
+		select * from tbl_board where bno =
+		#{bno}
 	</select>
 
 
@@ -39,25 +63,34 @@
 
 	<update id="update">
 		update tbl_board set
-			title = #{title},
-			content = #{content},
-			writer = #{writer},
-			update_date = now()
+		title = #{title},
+		content =
+		#{content},
+		writer = #{writer},
+		update_date = now()
 		where bno = #{bno}
 	</update>
-	
+
 	<select id="getListWithPaging" resultType="BoardVO">
-		<![CDATA[
-			select *
-			from tbl_board
-			order by bno desc
-			limit #{offset}, #{amount}
-		]]>
-	</select>	
-	
-	<select id="getTotalCount" resultType="int">
-		select count(*) from tbl_board;
+
+		select * from tbl_board
+
+		<where>
+			<include refid="criteria"></include>
+		</where>
+
+		order by bno desc
+		limit #{offset}, #{amount}
 	</select>
-	
+
+	<select id="getTotalCount" resultType="int">
+		select count(*) from tbl_board
+		
+		<where>
+			<include refid="criteria"></include>
+		</where>
+		
+	</select>
+
 
 </mapper>

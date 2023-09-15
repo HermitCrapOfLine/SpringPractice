@@ -31,7 +31,7 @@ public class BoardMapperTest {
 	}
 
 	
-	@Test
+//	@Test
 	public void testInsert() {
 		
 		for(int i = 0; i < 260; i++) {
@@ -97,6 +97,20 @@ public class BoardMapperTest {
 		List<BoardVO> list = mapper.getListWithPaging(cri);
 		
 		for (BoardVO board : list) {
+			log.info(board);
+		}
+	}
+	
+	@Test
+	public void testSearch() {
+		Criteria cri = new Criteria();
+		
+		cri.setKeyword("이해");
+		cri.setType("T");
+		
+		List<BoardVO> list = mapper.getListWithPaging(cri);
+		int count = mapper.getTotalCount(cri);
+		for(BoardVO board : list) {
 			log.info(board);
 		}
 	}

@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value=""/>
+		<item key="selection" value="register"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="true"/>
 		<list key="findhistory">
-			<item value="[^\u0009\u000A\u000D\u0020-\uD7FF\uE000-\uFFFD\u10000-\u10FFF]+"/>
-			<item value="jstl"/>
-			<item value="avatar"/>
-			<item value="main"/>
-			<item value="Ju"/>
-			<item value="junit"/>
-			<item value="juni"/>
-			<item value="j"/>
-			<item value="JUnit"/>
-			<item value="aspect"/>
-			<item value="Hika"/>
-			<item value="Hikari"/>
-			<item value="exclusion"/>
-			<item value="log4"/>
-			<item value="maven"/>
+			<item value="register"/>
+			<item value="getForm"/>
+			<item value="get"/>
+			<item value="mt-4"/>
+			<item value="move"/>
+			<item value="actionFrom"/>
+			<item value="pageMaker.prev"/>
+			<item value="actionForm"/>
+			<item value="remove"/>
+			<item value="modi"/>
+			<item value="modify"/>
+			<item value="list"/>
+			<item value="개별페이지"/>
+			<item value="searchForm"/>
+			<item value="pageMaker"/>
 		</list>
 		<list key="replacehistory">
 			<item value="aaaaaa"/>
@@ -31,10 +31,10 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="824"/>
-		<item key="DIALOG_Y_ORIGIN" value="264"/>
+		<item key="DIALOG_X_ORIGIN" value="125"/>
+		<item key="DIALOG_Y_ORIGIN" value="225"/>
 		<item key="DIALOG_WIDTH" value="288"/>
-		<item key="DIALOG_HEIGHT" value="391"/>
+		<item key="DIALOG_HEIGHT" value="387"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 	<section name="org.eclipse.jst.jsp.ui.internal.preferences.ui.JSPTemplatePreferencePage$JSPEditTemplateDialog_dialogBounds">

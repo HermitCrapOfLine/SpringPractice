@@ -28,15 +28,15 @@ public class BoardController {
 	private BoardService service;
 
 	@GetMapping("/list")
-	public void list(Criteria cri, Model model) {
-		log.info("list: " + cri);
-		model.addAttribute("list", service.getList(cri));
+	public void list(@ModelAttribute("cri") Criteria cri, Model model) {
 
 		int total = service.getTotal(cri);
 		log.info("total: " + total);
 
 		// model.addAttribute("pageMaker", new PageDTO(cri, 274)); // 임의로 123 요청
+		model.addAttribute("list", service.getList(cri));
 		model.addAttribute("pageMaker", new PageDTO(cri, total)); // 임의로 123 요청
+		
 	}
 
 	@GetMapping("/register")
@@ -70,8 +70,10 @@ public class BoardController {
 			rttr.addAttribute("bno", board.getBno());
 			rttr.addAttribute("pageNum", cri.getPageNum());
 			rttr.addAttribute("amount", cri.getAmount());
+			rttr.addAttribute("type", cri.getType());
+			rttr.addAttribute("keyword", cri.getKeyword());
 		}
-		return "redirect:/board/get";
+		return "redirect:" + cri.getLinkWithBno("/board/get", board.getBno());
 	}
 
 	@PostMapping("/remove")
@@ -82,7 +84,7 @@ public class BoardController {
 			rttr.addAttribute("pageNum", cri.getPageNum());
 			rttr.addAttribute("amount", cri.getAmount());
 		}
-		return "redirect:/board/list";
+		return "redirect:" + cri.getLink("/board/list");
 	}
 
 }
