@@ -2,6 +2,7 @@
 pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ include file="../layouts/header.jsp" %>
 <!-- summernote -->
 <link rel="stylesheet" href="/resources/css/summernote/summernote-lite.min.css">
@@ -23,26 +24,33 @@ $('#content').summernote('fontName', 'Arial');
 <div class="panel panel-default">
     <div class="panel-heading">Travel Register</div>
     <div class="panel-body">
-        <form role="form" method="post">
+        <form:form modelAttribute="travel" role="form" >
+        <form:hidden path="no" />
             <div class="form-group">
-				<label>권역</label> <input name="region" class="form-control">
-					
+				<form:label path="region">권역</form:label>
+				<form:input path="region" cssClass="form-control" />
+				<form:errors path="region" cssClass="error"/>
 			</div>
 			<div class="form-group">
-				<label>Region</label> <input name="title" class="form-control">
-			</div>
-			
-			<div class="form-group">
-				<label>주소</label> <input name="address" class="form-control">
-			</div>
-			
-			<div class="form-group">
-				<label>번호</label> <input name="phone" class="form-control">
+				<form:label path="title">제목</form:label>
+				<form:input path="title" cssClass="form-control" />
+				<form:errors path="title" cssClass="error"/>
 			</div>
 			
 			<div class="form-group">
-				<label>내용</label>
-				<textarea class="form-control" id="content" name="description" rows="10"></textarea>
+				<form:label path="address">주소</form:label>
+				<form:input path="address" cssClass="form-control" />
+			</div>
+			
+			<div class="form-group">
+				<form:label path="phone">번호</form:label>
+				<form:input path="phone" cssClass="form-control" />
+			</div>
+			
+			<div class="form-group">
+				<form:label path="description">내용</form:label>
+				<form:textarea path="description" cssClass="form-control" id="content" />
+				<form:errors path="description" cssClass="error"/>
 			</div>
             
             <button type="submit" class="btn btn-primary">
@@ -51,7 +59,7 @@ $('#content').summernote('fontName', 'Arial');
                 <i class="fas fa-undo"></i>취소</button>  
             <a href="javascript:history.back()" class="btn btn-primary">
                 <i class="fas fa-list"></i>목록</a>
-        </form>
+        </form:form>
     </div>
 </div>
 <%@ include file="../layouts/footer.jsp" %>

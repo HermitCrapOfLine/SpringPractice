@@ -1,5 +1,10 @@
 package org.galapagos.controller;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import javax.validation.Valid;
+
 import org.galapagos.criteria.Criteria;
 import org.galapagos.domain.BoardVO;
 import org.galapagos.domain.PageDTO;
@@ -7,6 +12,7 @@ import org.galapagos.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,7 +20,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 
 @Controller
@@ -26,6 +31,23 @@ public class BoardController {
 	@Autowired
 	private BoardService service;
 
+	@ModelAttribute("searchTypes")
+	public Map<String, String> searchTypes() {
+		Map<String, String> map = new LinkedHashMap<String, String>();
+		map.put("", "-- 검색대상선택 --");
+		map.put("T", "제목");
+		map.put("C", "내용");
+		map.put("W", "작성자");
+		map.put("TC", "제목+내용");
+		map.put("TW", "제목+작성자");
+		map.put("TWC", "제목+내용+작성자");
+		
+		
+		return map;
+	}
+	
+	
+	
 	@GetMapping("/list")
 	public void list(@ModelAttribute("cri") Criteria cri, Model model) {
 
@@ -39,13 +61,19 @@ public class BoardController {
 	}
 
 	@GetMapping("/register")
-	public void register() {
+	public void register(@ModelAttribute("board") BoardVO board) {
 		log.info("register");
 	}
 
 	@PostMapping("/register")
-	public String register(BoardVO board, RedirectAttributes rttr) {
-		log.info("register: " + board);
+	public String register(	@Valid
+							@ModelAttribute("board") BoardVO board, 
+							Errors errors,
+							RedirectAttributes rttr) {
+		if(errors.hasErrors()) {
+			return "board/register";
+		}
+		
 		service.register(board);
 		rttr.addFlashAttribute("result", board.getBno());
 		return "redirect:/board/list";
@@ -58,10 +86,16 @@ public class BoardController {
 	}
 
 	@PostMapping("/modify")
-	public String modify(BoardVO board, @ModelAttribute("cri") Criteria cri,
-			RedirectAttributes rttr) {
+	public String modify(@ModelAttribute("board") BoardVO board,
+						Errors errors,
+						@ModelAttribute("cri") Criteria cri,
+						RedirectAttributes rttr) {
 		
 		log.info("modify:" + board);
+		
+		if(errors.hasErrors()) {
+			return "board/modify";
+		}
 		
 		if (service.modify(board)) {
 			// Flash --> 1회성

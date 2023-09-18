@@ -131,3 +131,69 @@
 9월 15, 2023 17:31:23.70 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
 9월 15, 2023 17:46:55.181 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
 9월 15, 2023 17:50:25.303 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+9월 18, 2023 09:42:17.900 NEW SESSION
+9월 18, 2023 09:42:17.901 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 18, 2023 10:13:30.871 [9132:3988:0918/101330.871:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+9월 18, 2023 10:13:30.875 [9132:3988:0918/101330.874:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 18, 2023 10:13:30.875 [9132:3988:0918/101330.875:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 18, 2023 10:27:37.666 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 18, 2023 10:35:03.759 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 18, 2023 11:05:11.127 [10364:18772:0918/110511.127:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+9월 18, 2023 11:05:11.127 [10364:18772:0918/110511.127:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 18, 2023 11:05:11.128 [10364:18772:0918/110511.128:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 18, 2023 11:07:18.860 [10364:18772:0918/110718.860:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+9월 18, 2023 11:07:18.861 [10364:18772:0918/110718.860:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 18, 2023 11:07:18.861 [10364:18772:0918/110718.860:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 18, 2023 11:39:04.145 [10364:18772:0918/113904.145:ERROR:CONSOLE(1)] "Extension server error: Operation failed: http://localhost:8080/test/join has no execution context", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 18, 2023 14:25:07.964 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 18, 2023 14:44:16.387 [17320:6236:0918/144416.386:ERROR:device_event_log_impl.cc(222)] [14:44:16.385] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+9월 18, 2023 15:09:39.965 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 18, 2023 15:18:47.792 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 18, 2023 15:21:56.347 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 18, 2023 15:24:54.317 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 18, 2023 15:26:50.585 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 18, 2023 15:56:28.624 [2248:4268:0918/155628.624:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+9월 18, 2023 16:36:07.955 [2248:8340:0918/163607.955:ERROR:device_event_log_impl.cc(222)] [16:36:07.954] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+9월 18, 2023 16:37:57.468 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 18, 2023 16:49:24.831 [16056:12720:0918/164924.830:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+9월 18, 2023 16:49:24.831 [16056:12720:0918/164924.831:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 18, 2023 16:49:24.832 [16056:12720:0918/164924.831:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 18, 2023 17:09:07.229 [16056:12720:0918/170907.227:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+9월 18, 2023 17:09:07.230 [16056:12720:0918/170907.229:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 18, 2023 17:09:07.230 [16056:12720:0918/170907.229:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 18, 2023 17:09:15.117 [16056:12720:0918/170915.117:ERROR:CONSOLE(1)] "Cannot find context with specified id", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 18, 2023 17:09:15.118 [16056:12720:0918/170915.117:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: Cannot find context with specified id", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 18, 2023 17:09:15.118 [16056:12720:0918/170915.117:ERROR:CONSOLE(1)] "Cannot find context with specified id", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 18, 2023 17:09:15.118 [16056:12720:0918/170915.117:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: Cannot find context with specified id", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 18, 2023 17:09:57.959 [16056:12720:0918/170957.959:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+9월 18, 2023 17:09:57.960 [16056:12720:0918/170957.959:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 18, 2023 17:09:57.961 [16056:12720:0918/170957.959:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 18, 2023 17:10:00.86 [16056:12720:0918/171000.085:ERROR:CONSOLE(1)] "Extension server error: Operation failed: http://localhost:8080/travel/modify?pageNum=1&amount=10&type=&keyword=&no=102 has no execution context", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 18, 2023 17:11:01.605 [16056:12720:0918/171101.605:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+9월 18, 2023 17:11:01.607 [16056:12720:0918/171101.605:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 18, 2023 17:11:01.607 [16056:12720:0918/171101.606:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 18, 2023 17:11:01.617 [16056:12720:0918/171101.616:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+9월 18, 2023 17:11:01.619 [16056:12720:0918/171101.616:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 18, 2023 17:11:01.621 [16056:12720:0918/171101.616:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 18, 2023 17:11:01.622 [16056:12720:0918/171101.616:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+9월 18, 2023 17:11:01.622 [16056:12720:0918/171101.616:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 18, 2023 17:11:01.622 [16056:12720:0918/171101.616:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 18, 2023 17:11:01.899 [16056:12720:0918/171101.898:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+9월 18, 2023 17:11:01.900 [16056:12720:0918/171101.899:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 18, 2023 17:11:01.904 [16056:12720:0918/171101.904:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 18, 2023 17:11:01.906 [16056:12720:0918/171101.905:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+9월 18, 2023 17:11:01.906 [16056:12720:0918/171101.905:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 18, 2023 17:11:01.907 [16056:12720:0918/171101.905:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 18, 2023 17:11:01.907 [16056:12720:0918/171101.906:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+9월 18, 2023 17:11:01.907 [16056:12720:0918/171101.906:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 18, 2023 17:11:01.907 [16056:12720:0918/171101.906:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 18, 2023 17:11:02.774 [16056:12720:0918/171102.774:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+9월 18, 2023 17:11:02.775 [16056:12720:0918/171102.774:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 18, 2023 17:11:02.775 [16056:12720:0918/171102.774:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 18, 2023 17:12:48.38 [16056:12720:0918/171248.037:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+9월 18, 2023 17:12:48.38 [16056:12720:0918/171248.037:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 18, 2023 17:12:48.38 [16056:12720:0918/171248.038:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 18, 2023 17:18:47.768 [16056:12720:0918/171847.767:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+9월 18, 2023 17:18:47.768 [16056:12720:0918/171847.767:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 18, 2023 17:18:47.769 [16056:12720:0918/171847.768:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)

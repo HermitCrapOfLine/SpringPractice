@@ -24,6 +24,11 @@ a.page-link {
 }
 
 
+.error {
+	color: red;
+	font-size: 0.9rem;
+}
+
 
 
 

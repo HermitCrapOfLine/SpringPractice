@@ -2,6 +2,8 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+
 <%@ include file="../layouts/header.jsp"%>
 <!-- summernote -->
 <link rel="stylesheet"
@@ -15,8 +17,6 @@
 			lang : "ko-KR",// 한글설정
 		});
 
-		
-
 	});
 	// 기본글꼴설정
 	$('#content').summernote('fontName', 'Arial');
@@ -28,25 +28,29 @@
 <div class="panel panel-default">
 	<div class="panel-heading">board Register</div>
 	<div class="panel-body">
-		<form role="form" method="post">
-			<input type="hidden" name="pageNum" value="${cri.pageNum}"> <input
-				type="hidden" name="amount" value="${cri.amount}"> <input
-				type="hidden" name="bno" value="${board.bno}"> <input
-				type="hidden" name="type" value="${cri.type}" /> <input
-				type="hidden" name="keyword" value="${cri.keyword}" />
+		<form:form modelAttribute="board">
+			<form:input path="hidden" name="pageNum" value="${cri.pageNum}" />
+			<form:input path="hidden" name="amount" value="${cri.amount}" />
+			<form:input path="hidden" name="bno" value="${board.bno}" />
+			<form:input path="hidden" name="type" value="${cri.type}" />
+			<form:input path="hidden" name="keyword" value="${cri.keyword}" />
 
 			<div class="form-group">
-				<label>Title</label> <input name="title" class="form-control"
-					value="${board.title }">
+				<form:label path="title">Title</form:label>
+				<form:input path="title" cssClass="form-control" />
+				<form:errors path="title" cssClass="error" />
 				<!-- name은 BoardVO에 있는 멤버변수 이름을 사용 -->
 			</div>
 			<div class="form-group">
-				<label>Writer</label> <input name="writer" class="form-control"
-					value="${board.writer }">
+				<form:label path="writer">Writer</form:label>
+				<form:input path="writer" cssClass="form-control" />
+				<form:errors path="writer" cssClass="error" />
 			</div>
+			
 			<div class="form-group">
-				<label>Content</label>
-				<textarea class="form-control" id="content" name="content" rows="10">${board.content }</textarea>
+				<form:label path="content">Content</form:label>
+				<form:textarea path="content" cssClass="form-Control" id="content" />
+ 				<form:errors path="content" cssClass="error" />
 			</div>
 
 			<button type="submit" class="btn btn-primary">
@@ -55,9 +59,10 @@
 			<button type="reset" class="btn btn-primary">
 				<i class="fas fa-undo"></i>취소
 			</button>
-			<a href="${cri.getLinkWithBno('get', board.bno) }" class="btn btn-primary get"> <i class="fas fa-list"></i>돌아가기
+			<a href="${cri.getLinkWithBno('get', board.bno) }"
+				class="btn btn-primary get"> <i class="fas fa-list"></i>돌아가기
 			</a>
-		</form>
+		</form:form>
 	</div>
 </div>
 

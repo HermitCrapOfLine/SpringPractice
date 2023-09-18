@@ -32,4 +32,6 @@
     <fullyQualifiedTypeName name="org.junit.Before"/>
     <fullyQualifiedTypeName name="org.galapagos.criteria.Criteria"/>
     <fullyQualifiedTypeName name="org.galapagos.domain.BoardVO"/>
+    <fullyQualifiedTypeName name="javax.validation.constraints.Email"/>
+    <fullyQualifiedTypeName name="javax.validation.constraints.NotBlank"/>
 </qualifiedTypeNameHistroy>

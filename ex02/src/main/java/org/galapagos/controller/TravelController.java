@@ -1,13 +1,18 @@
 package org.galapagos.controller;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import javax.validation.Valid;
+
 import org.galapagos.criteria.Criteria;
-import org.galapagos.domain.BoardVO;
 import org.galapagos.domain.PageDTO;
 import org.galapagos.domain.TravelVO;
 import org.galapagos.service.TravelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,6 +31,21 @@ public class TravelController {
 	@Autowired
 	private TravelService service;
 	
+	@ModelAttribute("searchTypes")
+	public Map<String, String> searchTypes() {
+		Map<String, String> map = new LinkedHashMap<String, String>();
+		map.put("", "-- 검색대상선택 --");
+		map.put("R", "권역");
+		map.put("T", "제목");
+		map.put("D", "내용");
+		map.put("TD", "제목+내용");
+		map.put("TR", "권역+제목");
+		map.put("TRD", "권역+제목+내용");
+		
+		
+		return map;
+	}
+	
 	@GetMapping("/list")
 	public void list(@ModelAttribute("cri")	Criteria cri,
 			Model model) {
@@ -41,14 +61,22 @@ public class TravelController {
 			@RequestParam("no") Long no,
 			@ModelAttribute("cri") Criteria cir,
 			Model model) {
+		
 		log.info("/get or modify");
+		
 		model.addAttribute("travel", service.get(no));
 	}
 	
 	
 	@PostMapping("/modify")
-	public String modify(TravelVO travel, @ModelAttribute("cri") Criteria cri,
+	public String modify(@Valid @ModelAttribute("travel") TravelVO travel,
+			Errors errors,
+			@ModelAttribute("cri") Criteria cri,
 			RedirectAttributes rttr) {
+
+		if(errors.hasErrors()) {
+			return "travel/modify";
+		}
 		
 		service.modify(travel);
 		
@@ -57,12 +85,23 @@ public class TravelController {
 	}
 	
 	@GetMapping("/register")
-	public void register() {
+	public void register(@ModelAttribute("travel") TravelVO travel) {
 	}
 
 	@PostMapping("/register")
-	public String register(TravelVO travel, RedirectAttributes rttr) {
+	public String register(@Valid
+						   @ModelAttribute("travel") TravelVO travel, 
+						   Errors errors,
+						   RedirectAttributes rttr) {
+		
+		//유효성 검사 실패하면
+		//view 이름을 리턴한다. - forwarding
+		if(errors.hasErrors()) {
+			return "travel/register"; // view의 이름 리턴
+		}
+		
 		service.register(travel);
+		
 		return "redirect:/travel/list";
 	}
 	

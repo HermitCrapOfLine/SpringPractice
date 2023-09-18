@@ -2,6 +2,8 @@
 pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+
 <%@ include file="../layouts/header.jsp" %>
 <!-- summernote -->
 <link rel="stylesheet" href="/resources/css/summernote/summernote-lite.min.css">
@@ -23,18 +25,22 @@ $('#content').summernote('fontName', 'Arial');
 <div class="panel panel-default">
     <div class="panel-heading">board Register</div>
     <div class="panel-body">
-        <form role="form" method="post">
+        <form:form modelAttribute="board" >
             <div class="form-group">
-                <label>Title</label>
-                <input name="title" class="form-control"> <!-- name은 BoardVO에 있는 멤버변수 이름을 사용 -->  
+                <form:label path="title">Title</form:label>
+                <form:input path="title" cssClass="form-control" /> <!-- name은 BoardVO에 있는 멤버변수 이름을 사용 -->  
+				<form:errors path="title" cssClass="error" />
             </div>
             <div class="form-group">
-                <label>Writer</label>
-                <input name="writer" class="form-control">
+                <form:label path="writer">Writer</form:label>
+                <form:input path="writer" cssClass="form-control" /> <!-- name은 BoardVO에 있는 멤버변수 이름을 사용 -->  
+				<form:errors path="writer" cssClass="error" />
             </div>
             <div class="form-group">
-                <label>Content</label>
-                <textarea class="form-control" id="content" name="content" rows="10"></textarea>
+                <form:label path="content">Content</form:label>
+                <form:textarea path="content" 
+                cssClass="form-control" id="content" />
+                <form:errors path="content" cssClass="error"/>
             </div>
             
             <button type="submit" class="btn btn-primary">
@@ -43,7 +49,7 @@ $('#content').summernote('fontName', 'Arial');
                 <i class="fas fa-undo"></i>취소</button>  
             <a href="javascript:history.back()" class="btn btn-primary">
                 <i class="fas fa-list"></i>목록</a>
-        </form>
+        </form:form>
     </div>
 </div>
 <%@ include file="../layouts/footer.jsp" %>
