@@ -25,7 +25,7 @@
 		<form:errors path="username" cssClass="error" />
 	</div>
 
-	<div class="form=group">
+	<div class="form-group">
 		<form:label path="password"> 비밀번호: </form:label>
 		<form:password path="password" cssClass="form-control" />
 		<form:errors path="password" cssClass="error" />

@@ -65,12 +65,6 @@ public class TestController {
 		
 			return "test/join";		
 		}
-		// return "test/join 의미
-		// forwarding --> form을 다시 입력하도록 한다.(이전 값으로 복원)
-		// 해당 기법을 사용하려면 GET에서도 모델 객체를 넘겨주어야한다.
-		
-		
-		
 		// DB처리 작업
 		return "redirect:/";
 	}
