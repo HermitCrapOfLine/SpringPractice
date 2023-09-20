@@ -1,0 +1,39 @@
+package org.galapagos.security;
+
+import org.galapagos.config.RootConfig;
+import org.galapagos.config.SecurityConfig;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import lombok.extern.log4j.Log4j;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = {
+		RootConfig.class,
+		SecurityConfig.class
+})
+@Log4j
+public class PasswordEncoderTests {
+	
+	@Autowired
+	private PasswordEncoder pwEncoder;
+	
+	@Test
+	public void testEncode() {
+	String str = "0105";
+	
+	String enStr = pwEncoder.encode(str);
+	log.info("password: " + enStr);
+	
+	String enStr2 = pwEncoder.encode(str);
+	log.info("password: " + enStr2);
+	
+	log.info("같은 값인가? " + pwEncoder.matches(str, enStr));
+	log.info("같은 값인가? " + pwEncoder.matches(str, enStr2));
+	
+	}
+}

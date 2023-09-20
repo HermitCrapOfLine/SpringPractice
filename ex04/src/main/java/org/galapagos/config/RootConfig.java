@@ -15,7 +15,7 @@ import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration // 설정 파일이니 분석해줘 스프링 !
-@ComponentScan(basePackages = { "org.galapagos.sample" })
+@ComponentScan(basePackages = { "org.galapagos.service" })
 @MapperScan(basePackages = { "org.galapagos.mapper" })
 public class RootConfig {
 
@@ -31,7 +31,6 @@ public class RootConfig {
 		
 		config.setDriverClassName("net.sf.log4jdbc.sql.jdbcapi.DriverSpy");
 		config.setJdbcUrl("jdbc:log4jdbc:mysql://localhost:3307/glory_db");
-		
 		config.setUsername("GLORY");
 		config.setPassword("1234");
 		HikariDataSource dataSource = new HikariDataSource(config);

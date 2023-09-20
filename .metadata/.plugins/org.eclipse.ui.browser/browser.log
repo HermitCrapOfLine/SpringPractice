@@ -227,3 +227,21 @@
 
 9월 19, 2023 17:28:53.468 NEW SESSION
 9월 19, 2023 17:28:53.468 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 19, 2023 17:58:05.88 [7456:18820:0919/175805.086:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+9월 19, 2023 18:03:37.987 [7456:6972:0919/180337.987:ERROR:device_event_log_impl.cc(222)] [18:03:37.986] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+9월 19, 2023 18:33:43.715 [7456:18820:0919/183343.715:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+9월 19, 2023 19:40:57.962 [7456:18820:0919/194057.961:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -7
+
+9월 20, 2023 10:44:45.322 NEW SESSION
+9월 20, 2023 10:44:45.322 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 20, 2023 10:47:51.37 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 20, 2023 10:49:27.116 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 20, 2023 11:33:34.972 [17952:9080:0920/113334.972:ERROR:device_event_log_impl.cc(222)] [11:33:34.971] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+9월 20, 2023 13:02:56.558 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 20, 2023 13:04:31.81 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 20, 2023 13:05:08.00 [4752:7464:0920/130508.000:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+9월 20, 2023 13:05:08.01 [4752:7464:0920/130508.001:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 20, 2023 13:05:08.01 [4752:7464:0920/130508.001:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 20, 2023 13:46:05.952 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 20, 2023 14:03:10.156 [12716:4516:0920/140310.156:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+9월 20, 2023 15:37:51.878 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.

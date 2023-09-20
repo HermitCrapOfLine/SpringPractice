@@ -23,11 +23,18 @@
 			<td>Password:</td>
 			<td><input type='password' name='password' /></td>
 		</tr>
+		
+		<tr>
+			<input type="checkbox" name="remember-me"> 로그인 유지
+		</tr>
+		
 		<tr>
 			<td colspan='2'>
 			<input name="submit" type="submit" value="Login" /></td>
 		</tr>
 	</table>
 </form>
+
+
 
 	
