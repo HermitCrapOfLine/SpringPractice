@@ -245,3 +245,33 @@
 9월 20, 2023 13:46:05.952 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
 9월 20, 2023 14:03:10.156 [12716:4516:0920/140310.156:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
 9월 20, 2023 15:37:51.878 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+9월 21, 2023 10:03:18.219 NEW SESSION
+9월 21, 2023 10:03:18.219 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 21, 2023 10:05:06.740 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 21, 2023 10:15:45.809 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 21, 2023 10:17:12.50 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 21, 2023 10:57:40.418 [14704:14480:0921/105740.417:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+9월 21, 2023 11:04:17.387 [14704:12988:0921/110417.387:ERROR:mcs_client.cc(750)] Received close command, resetting connection.
+9월 21, 2023 11:42:41.881 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 21, 2023 13:09:04.995 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 21, 2023 13:14:33.494 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 21, 2023 13:20:06.662 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 21, 2023 13:27:18.790 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 21, 2023 13:35:53.386 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 21, 2023 14:04:50.402 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 21, 2023 14:11:02.956 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 21, 2023 14:14:04.658 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 21, 2023 14:38:17.808 [19860:20388:0921/143817.807:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+9월 21, 2023 14:38:17.808 [19860:20388:0921/143817.808:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 21, 2023 14:38:17.808 [19860:20388:0921/143817.808:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 21, 2023 14:46:19.777 [19860:20388:0921/144619.777:ERROR:CONSOLE(1)] "Extension server error: Operation failed: http://localhost:8080/security/profile has no execution context", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 21, 2023 14:46:19.788 [19860:20388:0921/144619.788:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+9월 21, 2023 14:46:19.788 [19860:20388:0921/144619.788:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 21, 2023 14:46:19.789 [19860:20388:0921/144619.788:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+9월 21, 2023 14:46:54.665 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 21, 2023 14:58:14.434 [5504:19988:0921/145814.432:ERROR:device_event_log_impl.cc(222)] [14:58:14.432] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+9월 21, 2023 15:31:04.357 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 21, 2023 16:36:09.857 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 21, 2023 16:46:29.910 [5280:20536:0921/164629.909:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+9월 21, 2023 17:28:09.895 [5280:20536:0921/172809.895:ERROR:device_event_log_impl.cc(222)] [17:28:09.895] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)

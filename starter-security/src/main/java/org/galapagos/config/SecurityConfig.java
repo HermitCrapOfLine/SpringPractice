@@ -2,8 +2,6 @@ package org.galapagos.config;
 
 import javax.sql.DataSource;
 
-
-
 import org.galapagos.security.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -16,7 +14,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
+import org.springframework.security.web.csrf.CsrfFilter;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.filter.CharacterEncodingFilter;
 
 import lombok.extern.log4j.Log4j;
 
@@ -24,6 +24,8 @@ import lombok.extern.log4j.Log4j;
 @EnableWebSecurity
 @Log4j
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+	
+	
 	
 	@Autowired
 	private DataSource dataSource;
@@ -48,13 +50,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
+		
+		CharacterEncodingFilter filter = new CharacterEncodingFilter();
+		filter.setEncoding("UTF-8");
+		filter.setForceEncoding(true);
+		
+		http.addFilterBefore(filter, CsrfFilter.class);
+		
+		
 		http.authorizeRequests() // 요청에 대한 권한 설정
-				.antMatchers("/security/all").permitAll() // 모두허용
-				.antMatchers("/security/admin").access("hasRole('ROLE_ADMIN')")
-				.antMatchers("/security/member").access("hasRole('ROLE_MEMBER')");
-
+				.antMatchers("/security/profile")
+				.authenticated();
+		
 		http.formLogin()
-		.loginPage("/security/login")
+		.loginPage("/security/login?error=login_required")
 		.loginProcessingUrl("/security/login")
 		.defaultSuccessUrl("/") // 로그인 페이지에서 바로 성공했을 때 홈으로 이동한다.
 		.failureUrl("/security/login?error=true"); // el : param.error
