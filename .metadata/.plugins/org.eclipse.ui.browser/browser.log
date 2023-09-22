@@ -275,3 +275,9 @@
 9월 21, 2023 16:36:09.857 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
 9월 21, 2023 16:46:29.910 [5280:20536:0921/164629.909:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
 9월 21, 2023 17:28:09.895 [5280:20536:0921/172809.895:ERROR:device_event_log_impl.cc(222)] [17:28:09.895] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+
+9월 22, 2023 10:02:54.194 NEW SESSION
+9월 22, 2023 10:02:54.194 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 22, 2023 10:09:35.205 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 22, 2023 10:56:27.291 [21376:20424:0922/105627.291:ERROR:device_event_log_impl.cc(222)] [10:56:27.290] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+9월 22, 2023 14:46:11.472 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.

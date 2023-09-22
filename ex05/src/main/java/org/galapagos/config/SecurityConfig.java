@@ -55,12 +55,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		
 		http.addFilterBefore(filter, CsrfFilter.class);
 		
+		http.csrf().ignoringAntMatchers("/api/**"); 
+		
+		// REST API 는 Form으로 주고 받는 게 아니기 때문에 csrf를 무시한다.
+		
 		
 		http.authorizeRequests() // 요청에 대한 권한 설정
 				.antMatchers("/security/profile").authenticated()
 				.antMatchers("/board/register",
 							"/board/modify",
-							"/board/remove").authenticated();
+							"/board/remove").authenticated()
+				.antMatchers(
+						"/travel/register",
+						"/travel/modify",
+						"/travel/remove").access("hasRole('ROLE_MANAGER')");
 		
 		http.formLogin()
 		.loginPage("/security/login?error=login_required")

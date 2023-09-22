@@ -68,6 +68,7 @@ public class SecurityController {
 					@PathVariable("username") String username,
 			HttpServletResponse response) throws IOException {
 
+			
 		File src = new File(MemberServiceimpl.AVATAR_UPLOAD_DIR, username + ".png");
 		if (!src.exists()) {
 			src = new File(MemberServiceimpl.AVATAR_UPLOAD_DIR, "unknown.png");

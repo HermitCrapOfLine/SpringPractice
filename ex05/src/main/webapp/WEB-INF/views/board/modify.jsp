@@ -29,23 +29,17 @@
 	<div class="panel-heading">board Register</div>
 	<div class="panel-body">
 		<form:form modelAttribute="board">
-			<form:input path="hidden" name="pageNum" value="${cri.pageNum}" />
-			<form:input path="hidden" name="amount" value="${cri.amount}" />
-			<form:input path="hidden" name="bno" value="${board.bno}" />
-			<form:input path="hidden" name="type" value="${cri.type}" />
-			<form:input path="hidden" name="keyword" value="${cri.keyword}" />
-
+			<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />
+			<form:hidden path="bno" />
+			<form:hidden path="writer" />
+					
 			<div class="form-group">
 				<form:label path="title">Title</form:label>
 				<form:input path="title" cssClass="form-control" />
 				<form:errors path="title" cssClass="error" />
 				<!-- name은 BoardVO에 있는 멤버변수 이름을 사용 -->
 			</div>
-			<div class="form-group">
-				<form:label path="writer">Writer</form:label>
-				<form:input path="writer" cssClass="form-control" />
-				<form:errors path="writer" cssClass="error" />
-			</div>
+			
 			
 			<div class="form-group">
 				<form:label path="content">Content</form:label>

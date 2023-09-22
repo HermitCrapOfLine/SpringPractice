@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="로그인"/>
+		<item key="selection" value="jack"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="true"/>
 		<list key="findhistory">
+			<item value="jack"/>
+			<item value="son"/>
+			<item value="json"/>
+			<item value="ja"/>
+			<item value="jac"/>
+			<item value="jackson"/>
+			<item value="sec"/>
+			<item value="pathname"/>
+			<item value="FIle"/>
+			<item value="File(String"/>
+			<item value="File"/>
+			<item value="File("/>
+			<item value="sm"/>
 			<item value="로그인"/>
 			<item value="commons-fileupload"/>
-			<item value="multipart"/>
-			<item value="multi"/>
-			<item value="avata"/>
-			<item value="sm/"/>
-			<item value="img"/>
-			<item value="sec"/>
-			<item value="username"/>
-			<item value="시작"/>
-			<item value="tlwkr"/>
-			<item value="UserDetail"/>
-			<item value="configure("/>
-			<item value="configure"/>
-			<item value="years"/>
 		</list>
 		<list key="replacehistory">
 			<item value="member"/>

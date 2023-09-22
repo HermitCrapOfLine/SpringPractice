@@ -1,11 +1,8 @@
 package org.galapagos.controller;
 
 import java.util.LinkedHashMap;
-
 import java.util.Map;
-
 import javax.validation.Valid;
-
 import org.galapagos.criteria.Criteria;
 import org.galapagos.domain.BoardVO;
 import org.galapagos.domain.PageDTO;
@@ -87,7 +84,8 @@ public class BoardController {
 	}
 
 	@PostMapping("/modify")
-	public String modify(@ModelAttribute("board") BoardVO board,
+	public String modify(@Valid
+						@ModelAttribute("board") BoardVO board,
 						Errors errors,
 						@ModelAttribute("cri") Criteria cri,
 						RedirectAttributes rttr) {

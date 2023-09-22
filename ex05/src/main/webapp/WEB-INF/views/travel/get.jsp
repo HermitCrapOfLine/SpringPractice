@@ -2,6 +2,8 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://www.springframework.org/security/tags"
+	prefix="sec"%>
 <%@ include file="../layouts/header.jsp"%>
 
 
@@ -53,20 +55,24 @@
 <div class="mt-4">
 	<a href="${cri.getLink('list') }" class="btn btn-primary list"> <i
 		class="fas fa-list"></i>목록
-	</a> <a href="${cri.getLink('modify')}&no=${travel.no}"
+	</a> 
+	<sec:authorize access="hasRole('MANAGER')">
+	<a href="${cri.getLink('modify')}&no=${travel.no}"
 		class="btn btn-primary modify"> <i class="far fa-edit"></i> 수정
 	</a> <a href="#" class="btn btn-danger remove"> <i
 		class="fas fa-trash-alt"></i>삭제
 	</a>
+	</sec:authorize>
 </div>
 
 
 <form action="remove" method="post" name="removeForm">
-	<input type="hidden" name="no" value="${travel.no}" /> <input
-		type="hidden" name="pageNum" value="${cri.pageNum}" /> <input
-		type="hidden" name="amount" value="${cri.amount}" /> <input
-		type="hidden" name="type" value="${cri.type}" /> <input type="hidden"
-		name="keyword" value="${cri.keyword}" />
+<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />
+	<input type="hidden" name="no" value="${travel.no}" /> 
+	<input type="hidden" name="pageNum" value="${cri.pageNum}" /> 
+	<input type="hidden" name="amount" value="${cri.amount}" /> 
+	<input type="hidden" name="type" value="${cri.type}" /> 
+	<input type="hidden" name="keyword" value="${cri.keyword}" />
 </form>
 
 <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b66fbde391b88480d9050ef5798db4ee&libraries=services"></script>

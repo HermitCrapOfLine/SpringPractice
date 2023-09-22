@@ -67,8 +67,8 @@ public class SecurityController {
 
 	@GetMapping("/avatar/{size}/{username}")
 	@ResponseBody
-	public void avata(@PathVariable("size") 
-	String size, @PathVariable("username") String username,
+	public void avata(@PathVariable("size")	String size,
+					@PathVariable("username") String username,
 			HttpServletResponse response) throws IOException {
 
 		File src = new File(MemberServiceimpl.AVATAR_UPLOAD_DIR, username + ".png");

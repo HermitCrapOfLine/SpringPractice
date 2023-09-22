@@ -25,6 +25,7 @@ $('#content').summernote('fontName', 'Arial');
     <div class="panel-heading">Travel Register</div>
     <div class="panel-body">
         <form:form modelAttribute="travel" role="form" >
+        <input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />
         <form:hidden path="no" />
             <div class="form-group">
 				<form:label path="region">권역</form:label>
