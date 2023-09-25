@@ -5,8 +5,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="org.galapagos.mapper.CommentMapper">
 	<select id="readAll" resultType="CommentVO">
 		select * from tbl_comment
-		where
-		bno = #{bno}
+		where bno = #{bno}
+		order by no desc
 	</select>
 	<select id="get" resultType="CommentVO">
 		select * from tbl_comment
@@ -24,8 +24,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<update id="update">
 		update tbl_comment
 		set
-		content = #{content},
-		update_date = now()
+			content = #{content},
+			update_date = now()
 		where no = #{no}
 	</update>
 	<delete id="delete">
