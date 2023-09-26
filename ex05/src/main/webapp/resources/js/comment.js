@@ -123,7 +123,7 @@ if(!confirm('수정할까요?')) return;
 	console.log('수정', comment);
 	
 	// COMMENT UPDATE API 호출.....
-	 comment = rest_put(COMMENT_URL + comment.no, comment);
+	comment = await rest_modify(COMMENT_URL + comment.no, comment);
 	
 	const contentEl = commentEl.find('.comment-content')
 	editContentEl.remove();

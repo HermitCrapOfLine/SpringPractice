@@ -7,7 +7,6 @@ async function rest_get(url) {
 	}
 }
 
-
 async function rest_create(url, data) {
 	try {
 		let res = await fetch(url, {
@@ -33,7 +32,6 @@ async function rest_modify(url, data) {
 		console.log(e);
 	}
 }	
-
 
 async function rest_delete(url) {
 	try {

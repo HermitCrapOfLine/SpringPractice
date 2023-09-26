@@ -39,7 +39,10 @@ const COMMENT_URL = '/api/board/${param.bno}/comment/';
 			createComment(bno, writer);
 		});
 		
+		
 		$('.comment-list').on('click', '.comment-update-show-btn', showUpdateComment);
+		
+		
 		
 		// 수정 확인 버튼 클릭
 		$('.comment-list').on('click', '.comment-update-btn', function (e){
