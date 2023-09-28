@@ -14,11 +14,13 @@
 
 <script src="/resources/js/rest.js"></script>
 <script src="/resources/js/comment.js"></script>
+<script src="/resources/js/reply.js"></script>
 
 <script>
 // 댓글 기본 URL 상수 - 전역 상수
 
 const COMMENT_URL = '/api/board/${param.bno}/comment/';
+const REPLY_URL = '/api/board/${param.bno}/reply/';
 
 	$(document).ready(async function() {
  
@@ -39,10 +41,7 @@ const COMMENT_URL = '/api/board/${param.bno}/comment/';
 			createComment(bno, writer);
 		});
 		
-		
 		$('.comment-list').on('click', '.comment-update-show-btn', showUpdateComment);
-		
-		
 		
 		// 수정 확인 버튼 클릭
 		$('.comment-list').on('click', '.comment-update-btn', function (e){
@@ -54,9 +53,33 @@ const COMMENT_URL = '/api/board/${param.bno}/comment/';
 				cancelCommentUpdate);
 		
 		$('.comment-list').on('click', '.comment-delete-btn', deleteComment);
-;
+
+		$('.comment-list').on('click', '.reply-add-show-btn', function(e){
+			showReplyAdd($(this), writer);
+		});
 		
 		
+		// writer 매개변수가 필요하면 function(e)을 사용한다
+		$('.comment-list').on('click', '.reply-add-btn', function(e){
+			addReply($(this), writer);
+		});
+		
+		$('.comment-list').on('click', '.reply-add-cancel-btn', cancelReply);
+		
+		$('.comment-list').on('click', '.reply-update-show-btn', function(e){
+			showUpdateReply($(this));
+		});
+		
+		// 답글 수정 등록
+		$('.comment-list').on('click', '.reply-update', function(e){
+			updateReply($(this));
+		});
+		
+		// 답글 수정 취소
+		$('.comment-list').on('click', '.reply-update-cancel', cancelReplyUpdate);
+		
+		// 답글 삭제
+		$('.comment-list').on('click', '.reply-delete-btn', deleteReply);
 	});
 </script>
 

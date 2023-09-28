@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="reateCommentTemplate"/>
+		<item key="selection" value="답글"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="true"/>
 		<list key="findhistory">
+			<item value="답글"/>
+			<item value="replyAddable"/>
+			<item value="수정"/>
+			<item value="댭글"/>
+			<item value="댭걸"/>
+			<item value="showUpdate"/>
+			<item value="showUpdatw"/>
 			<item value="reateCommentTemplate"/>
 			<item value="reateCommentTemplate("/>
 			<item value="comment-list"/>
@@ -16,13 +23,6 @@
 			<item value="find"/>
 			<item value="updateCom"/>
 			<item value="update"/>
-			<item value="수정"/>
-			<item value="댓글 수정하기"/>
-			<item value="btn-group"/>
-			<item value="btn-"/>
-			<item value="btn-g"/>
-			<item value="btn"/>
-			<item value="closest"/>
 		</list>
 		<list key="replacehistory">
 			<item value="member"/>
