@@ -41,7 +41,7 @@
 	<select id="getList" resultType="TravelVO">
 
 		select * from travel
-		
+
 		<where>
 			<include refid="criteria"></include>
 		</where>
@@ -53,7 +53,6 @@
 	<select id="read" resultType="TravelVO">
 		select * from travel
 		where no = #{no}
-		order by no
 	</select>
 
 	<insert id="insert">
