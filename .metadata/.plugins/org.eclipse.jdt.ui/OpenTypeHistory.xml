@@ -1,4 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-    <typeInfo handle="=ex04-1/C:\/Users\/jangy\/.m2\/repository\/org\/springframework\/security\/spring-security-config\/5.0.7.RELEASE\/spring-security-config-5.0.7.RELEASE.jar=/maven.pomderived=/true=/=/org.eclipse.jst.component.dependency=/\/WEB-INF\/lib=/=/maven.pomderived=/true=/=/org.eclipse.jst.component.archivename=/spring-security-config-5.0.7.RELEASE.jar=/=/maven.groupId=/org.springframework.security=/=/maven.artifactId=/spring-security-config=/=/maven.version=/5.0.7.RELEASE=/=/maven.scope=/compile=/&lt;org.springframework.security.config.annotation.web.configuration(WebSecurityConfigurerAdapter.class[WebSecurityConfigurerAdapter" modifiers="1057" timestamp="1695082461881"/>
-</typeInfoHistroy>
+<typeInfoHistroy/>

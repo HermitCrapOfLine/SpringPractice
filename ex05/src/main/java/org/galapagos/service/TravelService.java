@@ -10,6 +10,8 @@ public interface TravelService {
 	public int getTotal(Criteria cri);
 
 	public List<TravelVO> getList(Criteria cri);
+	
+	public List<TravelVO> getRandom(int count);
 
 	public TravelVO get(Long no);
 

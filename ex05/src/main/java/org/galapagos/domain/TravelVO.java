@@ -1,5 +1,9 @@
 package org.galapagos.domain;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 import javax.validation.constraints.NotBlank;
 
 import lombok.Data;
@@ -18,4 +22,17 @@ public class TravelVO {
 	private String description;
 	private String address;
 	private String phone;
+	
+	public String getImage() {
+		int i = new Random().nextInt(5) + 1;
+		return String.format("/resources/images/travel/%03d-%d.jpg", no, i);
+	}
+	
+	public List<String> getImages() {
+		List<String> list = new ArrayList<>();
+		for (int i = 1; i <= 5; i++) {
+			list.add(String.format("/resources/images/travel/%03d-%d.jpg", no, i));
+		}
+		return list;
+	}
 }

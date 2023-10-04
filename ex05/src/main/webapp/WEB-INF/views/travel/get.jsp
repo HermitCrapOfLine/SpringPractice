@@ -6,6 +6,14 @@
 	prefix="sec"%>
 <%@ include file="../layouts/header.jsp"%>
 
+<style>
+.thumb-images img {
+	width: 20%;
+	height: 150px;
+	padding: 2px;
+	object-fit: cover;
+}
+</style>
 
 <script>
 	$(document).ready(function() {
@@ -39,19 +47,21 @@
 	<div><i class="fa-solid fa-headset"></i> ${travel.phone}</div>
 </div>
 
-
-
 <hr>
 
 <div>${travel.description}</div>
 
+	<div class="thumb-images my-5 d-flex">
+		<c:forEach var="image" items="${travel.images }">
+			<img src="${image}">
+		</c:forEach>
+	</div>
 
 <div class="mt-4"><i class="fa-solid fa-vihara"></i>주소: ${travel.address}</div>
 
 <div id="map" style="width: 100%; height: 300px; background: gray">
 
 </div>
-
 <div class="mt-4">
 	<a href="${cri.getLink('list') }" class="btn btn-primary list"> <i
 		class="fas fa-list"></i>목록

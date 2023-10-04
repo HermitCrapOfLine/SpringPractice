@@ -10,6 +10,8 @@ public interface TravelMapper {
 
 	// 페이지 목록 추출
 	public List<TravelVO> getList(Criteria cri);
+	
+	public List<TravelVO> getRandom(int count);
 
 	public TravelVO read(Long no);
 
