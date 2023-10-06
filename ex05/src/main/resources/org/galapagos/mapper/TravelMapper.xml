@@ -29,7 +29,7 @@
 	</sql>
 
 	<select id="getTotalCount" resultType="int">
-		select count(*) from travel
+		select count(*) from view_travel
 
 		<where>
 			<include refid="criteria"></include>
@@ -39,7 +39,7 @@
 
 	<select id="getList" resultType="TravelVO">
 
-		select * from travel
+		select * from view_travel
 
 		<where>
 			<include refid="criteria"></include>
@@ -50,7 +50,7 @@
 	</select>
 
 	<select id="read" resultType="TravelVO">
-		select * from travel
+		select * from view_travel
 		where no = #{no}
 	</select>
 
@@ -80,7 +80,7 @@
 	</delete>
 	
 	<select id="getRandom" resultType="TravelVO">
-		select * from travel
+		select * from view_travel
 		order by rand()
 		limit #{count}
 	</select>

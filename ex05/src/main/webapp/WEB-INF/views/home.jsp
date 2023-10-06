@@ -27,7 +27,7 @@
 	<div class="carousel-inner">
 		<c:forEach var="travel" items="${travels}" varStatus="status">
 			<div class="carousel-item <c:if test="${status.first}">active</c:if>" >
-				<a href="/travel/get?no=${travel.no }">
+				<a href="/travel/get?no=${travel.no }&amount=12">
 				<img src="${travel.image}" alt="${travel.title}">
 			<div class="carousel-caption">
 				<h3>${travel.title}</h3>
