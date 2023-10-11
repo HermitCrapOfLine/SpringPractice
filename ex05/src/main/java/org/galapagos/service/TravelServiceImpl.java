@@ -1,5 +1,6 @@
 package org.galapagos.service;
 
+import java.security.Principal;
 import java.util.List;
 
 import org.galapagos.criteria.Criteria;
@@ -16,27 +17,38 @@ public class TravelServiceImpl implements TravelService {
 
 	@Autowired
 	private TravelMapper mapper;
-	
+
 	@Override
 	public int getTotal(Criteria cri) {
 		return mapper.getTotalCount(cri);
 	}
 
 	@Override
-	public List<TravelVO> getList(Criteria cri) {
-		return mapper.getList(cri);
+	public List<TravelVO> getList(Criteria cri, Principal principal) {
+		List<TravelVO> list = mapper.getList(cri);
+		if (principal != null) {
+			List<Long> hearts = mapper.getHeartsList(principal.getName());
+			for (TravelVO travel : list) {
+				travel.setMyHeart(hearts.contains(travel.getNo()));
+			}
+		}
+		return list;
 	}
 
 	@Override
-	public TravelVO get(Long no) {
-		// 조회수 처리
-		return mapper.read(no);
+	public TravelVO get(Long no, Principal principal) {
+		TravelVO travel = mapper.read(no);
+		if (principal != null) {
+			List<Long> hearts = mapper.getHeartsList(principal.getName());
+			travel.setMyHeart(hearts.contains(travel.getNo()));
+		}
+		return travel;
 	}
 
 	@Override
 	public void register(TravelVO travel) {
 		// 첨부파일 업로드
-		
+
 		mapper.insert(travel);
 	}
 

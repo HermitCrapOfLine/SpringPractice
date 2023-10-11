@@ -24,6 +24,7 @@ public class TravelVO {
 	private String phone;
 	
 	private String hearts;
+	private Boolean myHeart;
 	
 	
 	public String getImage() {

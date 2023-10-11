@@ -1,5 +1,6 @@
 package org.galapagos.controller;
 
+import java.security.Principal;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -25,7 +26,6 @@ import lombok.extern.log4j.Log4j;
 @Controller
 @Log4j
 @RequestMapping("/travel")
-
 public class TravelController {
 
 	@Autowired
@@ -47,11 +47,11 @@ public class TravelController {
 	}
 	
 	@GetMapping("/list")
-	public void list(@ModelAttribute("cri")	Criteria cri,
+	public void list(@ModelAttribute("cri")	Criteria cri, Principal principal,
 			Model model) {
 
 		int total = service.getTotal(cri);
-		model.addAttribute("list", service.getList(cri));
+		model.addAttribute("list", service.getList(cri, principal));
 		model.addAttribute("pageMaker", new PageDTO(cri, total)); // 임의로 123 요청
 		
 	}
@@ -60,11 +60,12 @@ public class TravelController {
 	public void get(
 			@RequestParam("no") Long no,
 			@ModelAttribute("cri") Criteria cir,
+			Principal principal,
 			Model model) {
 		
 		log.info("/get or modify");
 		
-		model.addAttribute("travel", service.get(no));
+		model.addAttribute("travel", service.get(no, principal));
 	}
 	
 	

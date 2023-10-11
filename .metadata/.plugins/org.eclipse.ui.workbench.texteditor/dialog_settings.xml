@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="heart"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="true"/>
 		<list key="findhistory">
+			<item value="deleteHeart"/>
+			<item value="addHeart"/>
+			<item value="galapagos"/>
+			<item value="i class"/>
+			<item value="ready"/>
+			<item value="document"/>
+			<item value="${travel.hearts}"/>
+			<item value="list"/>
 			<item value="heart"/>
 			<item value="int"/>
 			<item value="bind"/>
@@ -15,14 +23,6 @@
 			<item value="image"/>
 			<item value="style"/>
 			<item value="reateCommentTemplate"/>
-			<item value="reateCommentTemplate("/>
-			<item value="comment-list"/>
-			<item value="comment"/>
-			<item value="댓글 수정"/>
-			<item value="find"/>
-			<item value="updateCom"/>
-			<item value="update"/>
-			<item value="수정"/>
 		</list>
 		<list key="replacehistory">
 			<item value="member"/>
