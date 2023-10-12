@@ -43,8 +43,9 @@
     <fullyQualifiedTypeName name="org.galapagos.config.SecurityConfig"/>
     <fullyQualifiedTypeName name="org.galapagos.service.MemberServiceimpl"/>
     <fullyQualifiedTypeName name="net.coobird.thumbnailator.Thumbnails"/>
-    <fullyQualifiedTypeName name="java.io.File"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
     <fullyQualifiedTypeName name="org.galapagos.domain.PageDTO"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartFile"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
 </qualifiedTypeNameHistroy>

@@ -1,8 +1,11 @@
 package org.galapagos.controller;
 
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
+
 import javax.validation.Valid;
+
 import org.galapagos.criteria.Criteria;
 import org.galapagos.domain.BoardVO;
 import org.galapagos.domain.PageDTO;
@@ -16,6 +19,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import lombok.extern.log4j.Log4j;
@@ -39,13 +43,10 @@ public class BoardController {
 		map.put("TC", "제목+내용");
 		map.put("TW", "제목+작성자");
 		map.put("TWC", "제목+내용+작성자");
-		
-		
+
 		return map;
 	}
-	
-	
-	
+
 	@GetMapping("/list")
 	public void list(@ModelAttribute("cri") Criteria cri, Model model) {
 
@@ -55,7 +56,7 @@ public class BoardController {
 		// model.addAttribute("pageMaker", new PageDTO(cri, 274)); // 임의로 123 요청
 		model.addAttribute("list", service.getList(cri));
 		model.addAttribute("pageMaker", new PageDTO(cri, total)); // 임의로 123 요청
-		
+
 	}
 
 	@GetMapping("/register")
@@ -64,15 +65,12 @@ public class BoardController {
 	}
 
 	@PostMapping("/register")
-	public String register(	@Valid
-							@ModelAttribute("board") BoardVO board, 
-							Errors errors,
-							RedirectAttributes rttr) {
-		if(errors.hasErrors()) {
+	public String register(@Valid @ModelAttribute("board") BoardVO board, Errors errors, List<MultipartFile> files,
+			RedirectAttributes rttr) {
+		if (errors.hasErrors()) {
 			return "board/register";
 		}
-		
-		service.register(board);
+		service.register(board, files);
 		rttr.addFlashAttribute("result", board.getBno());
 		return "redirect:/board/list";
 	}
@@ -84,18 +82,15 @@ public class BoardController {
 	}
 
 	@PostMapping("/modify")
-	public String modify(@Valid
-						@ModelAttribute("board") BoardVO board,
-						Errors errors,
-						@ModelAttribute("cri") Criteria cri,
-						RedirectAttributes rttr) {
-		
+	public String modify(@Valid @ModelAttribute("board") BoardVO board, Errors errors,
+			@ModelAttribute("cri") Criteria cri, RedirectAttributes rttr) {
+
 		log.info("modify:" + board);
-		
-		if(errors.hasErrors()) {
+
+		if (errors.hasErrors()) {
 			return "board/modify";
 		}
-		
+
 		if (service.modify(board)) {
 			// Flash --> 1회성
 			rttr.addFlashAttribute("result", "success");

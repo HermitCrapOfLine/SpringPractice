@@ -85,12 +85,30 @@
 
 	<select id="getTotalCount" resultType="int">
 		select count(*) from tbl_board
-		
 		<where>
 			<include refid="criteria"></include>
 		</where>
-		
 	</select>
 
+	<insert id="insertAttachment">
+		insert into tbl_board_attachment(filename, path, content_type, size, bno)
+		values(#{filename}, #{path}, #{contentType}, #{size}, #{bno})
+	</insert>
+	
+	<!-- join 처리 하지 않겠다는 select문 -->
+	<select id="getAttachmentList" resultType="BoardAttachmentVO">
+		select * from tbl_board_attachment
+		where bno = #{bno}
+		order by filename
+	</select>
 
+	<select id="getAttachment" resultType="BoardAttachmentVO">
+		select * from tbl_board_attachment
+		where no = #{no}
+	</select>
+	
+	<delete id="removeAttachment">
+		delete from tbl_board_attachment
+		where no = #{no}
+	</delete>
 </mapper>
