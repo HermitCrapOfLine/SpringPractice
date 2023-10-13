@@ -6,6 +6,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\backend_workspace\04_spring\starter"/>
 			<item value="C:\backend_workspace\04_spring\ex00"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -29,10 +30,8 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="ex002"/>
 		</list>
 		<list key="groupId">
-			<item value="ex002"/>
 		</list>
 		<list key="artifactId">
 		</list>
@@ -50,11 +49,13 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="org.galapagos"/>
 			<item value="ex002"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="mongoex"/>
 			<item value="ex002"/>
 		</list>
 		<list key="projectNameTemplate">

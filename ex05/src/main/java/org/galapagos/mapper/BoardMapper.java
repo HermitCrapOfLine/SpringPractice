@@ -26,7 +26,7 @@ public interface BoardMapper {
 	
 	public int getTotalCount(Criteria cri);
 	
-	public void insertAttachment(BoardAttachmentVO attach);
+	public void insertAttachment (BoardAttachmentVO attach);
 	
 	public List<BoardAttachmentVO> getAttachmentList(Long bno);
 	

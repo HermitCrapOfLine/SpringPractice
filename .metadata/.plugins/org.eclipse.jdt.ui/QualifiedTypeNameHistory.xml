@@ -48,4 +48,12 @@
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartFile"/>
     <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="com.mongodb.client.MongoClient"/>
+    <fullyQualifiedTypeName name="com.mongodb.MongoClientURI"/>
+    <fullyQualifiedTypeName name="com.mongodb.client.MongoCollection"/>
+    <fullyQualifiedTypeName name="com.mongodb.MongoClient"/>
+    <fullyQualifiedTypeName name="com.mongodb.client.MongoDatabase"/>
+    <fullyQualifiedTypeName name="org.bson.Document"/>
+    <fullyQualifiedTypeName name="java.net.URLEncoder"/>
+    <fullyQualifiedTypeName name="org.galapagos.domain.BoardAttachmentVO"/>
 </qualifiedTypeNameHistroy>

@@ -23,7 +23,7 @@
 	</section>
 	<section name="NewClassWizardPage">
 		<item key="create_constructor" value="false"/>
-		<item key="create_unimplemented" value="true"/>
+		<item key="create_unimplemented" value="false"/>
 	</section>
 	<section name="org.eclipse.jdt.internal.ui.dialogs.FilteredTypesSelectionDialog">
 		<item key="ShowStatusLine" value="true"/>
@@ -37,7 +37,7 @@
 		</section>
 	</section>
 	<section name="BuildPathsPropertyPage">
-		<item key="pageIndex" value="1"/>
+		<item key="pageIndex" value="2"/>
 	</section>
 	<section name="RefactoringWizard.preview">
 		<item key="width" value="600"/>

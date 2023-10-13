@@ -82,6 +82,19 @@ const COMMENT_URL = '/api/board/${param.bno}/comment/';
 
 <hr>
 
+<div class="text-end">
+	<c:forEach var="file" items="${board.attaches}">
+		<div class="attach-file-item">
+			<a href="/board/download/${file.no}" class="file-link"> <i
+				class="fa-solid fa-floppy-disk"></i> ${file.filename}
+				(${file.formatSize})<br>
+			</a>
+		</div>
+	</c:forEach>
+</div>
+<hr>
+
+
 <div class="my-4">${board.content}</div>
 
 <div class="mt-4">
@@ -103,31 +116,25 @@ const COMMENT_URL = '/api/board/${param.bno}/comment/';
 <!-- 새 댓글 작성 -->
 <c:if test="${username != board.writer }">
 	<div class="bg-light p-2 rounded my-5">
-		<div>${username == null ? '댓글을 작성하려면 먼저 로그인하세요' : '댓글 작성' }
-		</div>
-			<div>
-				<textarea class="form-control new-comment-content" rows="3"
-					${username == null ? 'disabled' : '' } }></textarea>
-				<div class="text-right">
-					<button class="btn btn-primary btn-sm my-2 comment-add-btn"
-						${username == null ? 'disabled' : '' } >
-						<i class="fa-regular fa-comment"></i> 확인
-					</button>
-				</div>
+		<div>${username == null ? '댓글을 작성하려면 먼저 로그인하세요' : '댓글 작성' }</div>
+		<div>
+			<textarea class="form-control new-comment-content" rows="3"${username == null ? 'disabled' : '' } }></textarea>
+			<div class="text-right">
+				<button class="btn btn-primary btn-sm my-2 comment-add-btn"
+					${username == null ? 'disabled' : '' }>
+					<i class="fa-regular fa-comment"></i> 확인
+				</button>
 			</div>
 		</div>
-	</c:if>
-		
+	</div>
+</c:if>
+
 
 
 <div class="my-5">
-	<i class="fa-regular fa-comments"></i>
-	댓글 목록
+	<i class="fa-regular fa-comments"></i> 댓글 목록
 	<hr>
-	<div class="comment-list">
-	
-	
-	</div>
+	<div class="comment-list"></div>
 </div>
 
 

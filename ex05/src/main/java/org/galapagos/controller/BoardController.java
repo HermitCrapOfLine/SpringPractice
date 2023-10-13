@@ -4,9 +4,11 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.galapagos.criteria.Criteria;
+import org.galapagos.domain.BoardAttachmentVO;
 import org.galapagos.domain.BoardVO;
 import org.galapagos.domain.PageDTO;
 import org.galapagos.service.BoardService;
@@ -16,9 +18,11 @@ import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -66,7 +70,7 @@ public class BoardController {
 
 	@PostMapping("/register")
 	public String register(@Valid @ModelAttribute("board") BoardVO board, Errors errors, List<MultipartFile> files,
-			RedirectAttributes rttr) {
+			RedirectAttributes rttr) throws Exception {
 		if (errors.hasErrors()) {
 			return "board/register";
 		}
@@ -114,4 +118,12 @@ public class BoardController {
 		return "redirect:" + cri.getLink("/board/list");
 	}
 
+	@GetMapping("/download/{no}")
+	@ResponseBody // 뷰를 사용하지 않고, 직접 내보낸다.
+	public void download(@PathVariable("no") Long no,
+			HttpServletResponse response) throws Exception {
+
+		BoardAttachmentVO attach = service.getAttachment(no);
+		attach.download(response);
+	}
 }

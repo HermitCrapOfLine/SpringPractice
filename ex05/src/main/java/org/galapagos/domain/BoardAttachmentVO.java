@@ -1,7 +1,14 @@
 package org.galapagos.domain;
 
+import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.OutputStream;
+import java.net.URLEncoder;
+import java.nio.file.Files;
+import java.text.DecimalFormat;
 import java.util.Date;
+
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.multipart.MultipartFile;
 
@@ -14,7 +21,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class BoardAttachmentVO {
 	public static final String UPLOAD_PATH = "c:/upload/board";
-	
+
 	private Long no;
 	private String filename;
 	private String path;
@@ -22,7 +29,7 @@ public class BoardAttachmentVO {
 	private Long size;
 	private Long bno;
 	private Date regDate;
-	
+
 	public BoardAttachmentVO(Long bno, MultipartFile part) throws Exception {
 		filename = part.getOriginalFilename();
 		contentType = part.getContentType();
@@ -31,5 +38,35 @@ public class BoardAttachmentVO {
 		path = UPLOAD_PATH + "/" + System.currentTimeMillis() + "_" + filename;
 		part.transferTo(new File(path));
 	}
+
+	public String getFormatSize() {
+		if (size <= 0)
+			return "0";
+		final String[] units = new String[] { "Bytes", "KB", "MB", "GB", "TB" };
+		int digitGroups = (int) (Math.log10(size) / Math.log10(1024));
+		return new DecimalFormat("#,##0.#").format(size / Math.pow(1024, digitGroups)) + " " + units[digitGroups];
+	}
 	
+	public void download(HttpServletResponse response) throws Exception {
+		
+		response.setContentType("apllication/download");
+		
+		// application/download 에서는 Long을 못쓴다. int로 변환
+		response.setContentLength(size.intValue());
+		
+		
+		// UTF 처리 해주지 않으면 오류발생. 한글이 존재할 수 있다.
+		String filename = URLEncoder.encode(this.filename, "UTF-8");
+		
+		// 저장대화상자 뜨게 해준다.
+		response.setHeader("Content-disposition","attachment;filename=\"" + filename + "\"");
+		
+		try(OutputStream os = response.getOutputStream();
+				BufferedOutputStream bos = new BufferedOutputStream(os)) {
+			File file = new File(path);
+			Files.copy(file.toPath(), bos);
+			
+			// copy(소스, 출력스트림);
+		}
+	}
 }
