@@ -6,6 +6,7 @@ import org.galapagos.criteria.Criteria;
 import org.galapagos.domain.BoardAttachmentVO;
 import org.galapagos.domain.BoardVO;
 import org.galapagos.mapper.BoardMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -18,7 +19,7 @@ import lombok.extern.log4j.Log4j;
 @AllArgsConstructor
 public class BoardServiceImpl implements BoardService {
 
-	// @Autowired
+	@Autowired
 	private BoardMapper mapper;
 
 	@Transactional(rollbackFor = Exception.class)
@@ -48,12 +49,20 @@ public class BoardServiceImpl implements BoardService {
 		return board;
 	}
 
+	@Transactional(rollbackFor = Exception.class)
 	@Override
-	public boolean modify(BoardVO board) {
+	public boolean modify(BoardVO board, List<MultipartFile> files) throws Exception{
 
-		log.info("modify....." + board);
-
-		return mapper.update(board) == 1;
+		int result = mapper.update(board);
+		Long bno = board.getBno();
+		
+		for(MultipartFile part : files) {
+			if(part.isEmpty()) continue;
+			BoardAttachmentVO attach = new BoardAttachmentVO(bno, part);
+			mapper.insertAttachment(attach);
+		}
+		
+		return result == 1;
 	}
 
 	@Override

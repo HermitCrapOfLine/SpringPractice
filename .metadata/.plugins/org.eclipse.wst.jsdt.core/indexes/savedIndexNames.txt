@@ -8,7 +8,6 @@ INDEX VERSION 1.4+C:\backend_workspace\04_spring\.metadata\.plugins\org.eclipse.
 2572198991.index
 3525727068.index
 3899751896.index
-1943740661.index
 103652226.index
 3129328917.index
 244385833.index

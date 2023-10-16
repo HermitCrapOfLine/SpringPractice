@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -86,8 +87,8 @@ public class BoardController {
 	}
 
 	@PostMapping("/modify")
-	public String modify(@Valid @ModelAttribute("board") BoardVO board, Errors errors,
-			@ModelAttribute("cri") Criteria cri, RedirectAttributes rttr) {
+	public String modify(@Valid @ModelAttribute("board") BoardVO board, Errors errors, List<MultipartFile> files,
+			@ModelAttribute("cri") Criteria cri, RedirectAttributes rttr) throws Exception {
 
 		log.info("modify:" + board);
 
@@ -95,7 +96,7 @@ public class BoardController {
 			return "board/modify";
 		}
 
-		if (service.modify(board)) {
+		if (service.modify(board, files)) {
 			// Flash --> 1회성
 			rttr.addFlashAttribute("result", "success");
 //			rttr.addAttribute("bno", board.getBno());
@@ -120,10 +121,16 @@ public class BoardController {
 
 	@GetMapping("/download/{no}")
 	@ResponseBody // 뷰를 사용하지 않고, 직접 내보낸다.
-	public void download(@PathVariable("no") Long no,
-			HttpServletResponse response) throws Exception {
+	public void download(@PathVariable("no") Long no, HttpServletResponse response) throws Exception {
 
 		BoardAttachmentVO attach = service.getAttachment(no);
 		attach.download(response);
+	}
+
+	@DeleteMapping("/remove/attach/{no}")
+	@ResponseBody
+	public String removeAttach(@PathVariable("no") Long no) throws Exception {
+		service.removeAttachment(no);
+		return "OK";
 	}
 }

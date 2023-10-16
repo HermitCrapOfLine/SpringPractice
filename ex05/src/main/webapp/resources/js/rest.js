@@ -36,7 +36,7 @@ async function rest_modify(url, data) {
 async function rest_delete(url) {
 	try {
 		let res = await fetch(url, { method: "DELETE" });
-		return await res.json();
+		return await res.text();
 	} catch(e) {
 	console.log(e);
 	}

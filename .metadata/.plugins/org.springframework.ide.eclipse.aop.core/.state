@@ -2,9 +2,9 @@
 <aop-reference-model>
 <aop-project name="ex02_02"/>
 <aop-project name="ex002"/>
-<aop-project name="ex03"/>
-<aop-project name="ex01"/>
 <aop-project name="ex05"/>
+<aop-project name="ex01"/>
+<aop-project name="ex03"/>
 <aop-project name="ex04-1"/>
 <aop-project name="starter"/>
 <aop-project name="ex04"/>

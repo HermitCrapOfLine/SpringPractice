@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="get"/>
+		<item key="selection" value="text"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="true"/>
 		<list key="findhistory">
+			<item value="text"/>
 			<item value="get"/>
+			<item value="label"/>
+			<item value="modify"/>
+			<item value="form:form"/>
+			<item value="result"/>
+			<item value="lombok"/>
+			<item value="Attribute"/>
 			<item value="board.content"/>
 			<item value="file"/>
 			<item value="register"/>
@@ -16,13 +23,6 @@
 			<item value="suze"/>
 			<item value="deleteHeart"/>
 			<item value="addHeart"/>
-			<item value="galapagos"/>
-			<item value="i class"/>
-			<item value="ready"/>
-			<item value="document"/>
-			<item value="${travel.hearts}"/>
-			<item value="list"/>
-			<item value="heart"/>
 		</list>
 		<list key="replacehistory">
 			<item value="member"/>

@@ -43,6 +43,7 @@ public class MongoEx4 {
 			
 			collection.insertMany(list);
 			System.out.println("insertMany 성공");
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
