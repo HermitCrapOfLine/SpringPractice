@@ -1,11 +1,12 @@
 package org.galapagos.domain;
 
 import java.util.ArrayList;
+
+
 import java.util.List;
 import java.util.Random;
-
 import javax.validation.constraints.NotBlank;
-
+import org.galapagos.domain.kakao.local.Local;
 import lombok.Data;
 
 @Data
@@ -26,6 +27,8 @@ public class TravelVO {
 	private String hearts;
 	private Boolean myHeart;
 	
+	private List<Local> locals;
+	
 	
 	public String getImage() {
 		int i = new Random().nextInt(5) + 1;
@@ -43,4 +46,5 @@ public class TravelVO {
 	public String getSummary() {
 		return description.split("<br>")[0];
 	}
+	
 }

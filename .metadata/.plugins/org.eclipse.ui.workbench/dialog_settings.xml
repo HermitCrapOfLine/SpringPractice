@@ -20,6 +20,7 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\jangy\OneDrive\바탕 화면\serachzip.zip"/>
 			<item value="C:\Users\jangy\OneDrive\바탕 화면\ex02_09_12.zip"/>
 			<item value="C:\Users\jangy\OneDrive\바탕 화면\ex02_InsertError.zip"/>
 			<item value="ex02_insertTestError.zip"/>

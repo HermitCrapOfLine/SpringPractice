@@ -5,8 +5,10 @@ import java.util.List;
 import org.galapagos.criteria.Criteria;
 import org.galapagos.domain.BoardAttachmentVO;
 import org.galapagos.domain.BoardVO;
+import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+@Service
 public interface BoardService {
 
 	public void register(BoardVO board, List<MultipartFile> files) throws Exception;

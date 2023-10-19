@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/board/{bno}/reply")
 public class ReplyController {
+	
 	@Autowired
 	private ReplyMapper mapper;
 	

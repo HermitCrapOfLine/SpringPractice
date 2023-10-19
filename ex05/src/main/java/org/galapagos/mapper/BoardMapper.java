@@ -6,7 +6,6 @@ import org.galapagos.criteria.Criteria;
 import org.galapagos.domain.BoardAttachmentVO;
 import org.galapagos.domain.BoardVO;
 
-
 public interface BoardMapper {
 	
 	//@Select("select * from tbl_board")

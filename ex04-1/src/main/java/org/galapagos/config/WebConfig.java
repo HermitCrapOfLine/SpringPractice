@@ -1,6 +1,7 @@
 package org.galapagos.config;
 
 import javax.servlet.Filter;
+
 import javax.servlet.ServletRegistration.Dynamic;
 
 import org.springframework.web.filter.CharacterEncodingFilter;

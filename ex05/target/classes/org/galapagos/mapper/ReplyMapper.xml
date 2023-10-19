@@ -15,7 +15,6 @@
 			order="AFTER">
 			SELECT LAST_INSERT_ID()
 			</selectKey>
-			
 			insert into tbl_reply (cno, writer, content)
 			values(#{cno}, #{writer}, #{content})
 	</insert>
