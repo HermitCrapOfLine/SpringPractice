@@ -5,17 +5,13 @@ import com.google.gson.annotations.SerializedName;
 
 import lombok.Data;
 
-
-@Data
+@Data   
 public class BookResult {
 
    @SerializedName("documents")
    List<Book> books;
 
    @SerializedName("meta")
-   Meta meta;
-
-
-    
+   Meta meta;  
     
 }

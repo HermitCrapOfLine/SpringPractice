@@ -1,11 +1,11 @@
 package org.galapagos.domain.kakao.book;
+
 import com.google.gson.annotations.SerializedName;
 
 import lombok.Data;
 
-  
 @Data
-public class Meta {                     
+public class Meta {
 
    @SerializedName("is_end")
    boolean isEnd;
@@ -15,6 +15,5 @@ public class Meta {
 
    @SerializedName("total_count")
    int totalCount;
-
-   
+    
 }

@@ -44,8 +44,5 @@ public class Book {
 
    @SerializedName("url")
    String url;
-
-
-   
     
 }

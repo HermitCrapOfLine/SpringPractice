@@ -6,6 +6,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\backend_workspace\04_spring\starter-security"/>
 			<item value="C:\backend_workspace\04_spring\ex002"/>
 			<item value="C:\backend_workspace\04_spring\starter"/>
 			<item value="C:\backend_workspace\04_spring\ex00"/>
@@ -55,8 +56,8 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="search"/>
-			<item value="Mini"/>
+			<item value="weka"/>
+			<item value="controller"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -68,6 +69,7 @@
 		</list>
 		<list key="version">
 			<item value="0.0.1-SNAPSHOT"/>
+			<item value="1.0.0-BUILD-SNAPSHOT"/>
 		</list>
 	</section>
 	<section name="wizardPage">

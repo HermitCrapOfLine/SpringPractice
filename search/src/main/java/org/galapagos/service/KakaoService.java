@@ -2,7 +2,6 @@ package org.galapagos.service;
 
 import org.galapagos.domain.kakao.book.BookResult;
 import org.galapagos.domain.kakao.local.LocalResult;
-
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

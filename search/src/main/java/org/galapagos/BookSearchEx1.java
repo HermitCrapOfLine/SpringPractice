@@ -2,7 +2,6 @@ package org.galapagos;
 
 import java.io.IOException;
 import java.util.Scanner;
-
 import org.galapagos.domain.kakao.book.Book;
 import org.galapagos.domain.kakao.book.BookResult;
 import org.galapagos.service.KakaoService;
