@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.http.HttpHeaders"/>
-    <fullyQualifiedTypeName name="javax.servlet.ServletRegistration.Dynamic"/>
-    <fullyQualifiedTypeName name="lombok.Data"/>
-    <fullyQualifiedTypeName name="lombok.extern.log4j.Log4j"/>
-    <fullyQualifiedTypeName name="org.galapagos.config.ServletConfig"/>
-    <fullyQualifiedTypeName name="org.springframework.test.web.servlet.setup.MockMvcBuilders"/>
-    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
-    <fullyQualifiedTypeName name="org.springframework.test.web.servlet.request.MockMvcRequestBuilders"/>
     <fullyQualifiedTypeName name="org.junit.Before"/>
     <fullyQualifiedTypeName name="org.galapagos.criteria.Criteria"/>
     <fullyQualifiedTypeName name="org.galapagos.domain.BoardVO"/>
@@ -60,4 +51,13 @@
     <fullyQualifiedTypeName name="weka.classifiers.trees.RandomForest"/>
     <fullyQualifiedTypeName name="weka.classifiers.Evaluation"/>
     <fullyQualifiedTypeName name="weka.core.converters.CSVLoader"/>
+    <fullyQualifiedTypeName name="java.util.jar.Attributes"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="weka.core.Attribute"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="weka.core.SerializationHelper"/>
+    <fullyQualifiedTypeName name="org.galapagos.service.TitanicService"/>
+    <fullyQualifiedTypeName name="weka.classifiers.Classifier"/>
+    <fullyQualifiedTypeName name="weka.core.Instance"/>
+    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
 </qualifiedTypeNameHistroy>

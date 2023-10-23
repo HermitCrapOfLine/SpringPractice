@@ -1,6 +1,7 @@
 package org.galapagos.domain;
 
 import java.util.Date;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -22,7 +23,7 @@ public class MemberVO {
 	@NotBlank(message = "비밀번호는 필수항목입니다.")
 	private String password;
 	
-	@NotBlank(message = "비밀번호 확인은 필수항목입니다..")
+	@NotBlank(message = "비밀번호 확인은 필수항목입니다.")
 	private String password2;
 	
 	@NotBlank(message = "email은 필수항목입니다.")

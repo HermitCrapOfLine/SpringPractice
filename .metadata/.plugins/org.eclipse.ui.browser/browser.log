@@ -540,3 +540,16 @@
 9월 25, 2023 17:46:38.875 [3876:20516:0925/174638.874:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
 9월 25, 2023 17:46:38.876 [3876:20516:0925/174638.875:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
 9월 25, 2023 17:46:38.876 [3876:20516:0925/174638.876:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+
+10월 21, 2023 21:29:19.382 NEW SESSION
+10월 21, 2023 21:29:19.382 [21568:15772:1021/212919.377:ERROR:CONSOLE(1)] "Uncaught (in promise) RangeError: Invalid line number 33 in 1-line document", source: devtools://devtools/bundled/devtools-frontend/front_end/third_party/codemirror.next/chunk/codemirror.js (1)
+10월 21, 2023 21:34:53.764 [21568:15772:1021/213453.763:ERROR:CONSOLE(1)] "Uncaught (in promise) RangeError: Invalid line number 10 in 1-line document", source: devtools://devtools/bundled/devtools-frontend/front_end/third_party/codemirror.next/chunk/codemirror.js (1)
+10월 21, 2023 21:36:25.738 [21568:15772:1021/213625.737:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+10월 21, 2023 21:36:25.738 [21568:15772:1021/213625.738:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+10월 21, 2023 21:36:25.739 [21568:15772:1021/213625.739:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/devtools-frontend/front_end/models/extensions/extensions.js (1)
+10월 21, 2023 21:36:25.750 [21568:15772:1021/213625.749:ERROR:CONSOLE(1)] "Received error with code E_PROTOCOLERROR while checking if react has loaded: "Inspector protocol error: %s"", source: chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js (1)
+
+10월 23, 2023 13:26:05.536 NEW SESSION
+10월 23, 2023 13:26:05.536 [24220:20316:1023/132605.535:ERROR:interface_endpoint_client.cc(702)] Message 0 rejected by interface blink.mojom.WidgetHost
+10월 23, 2023 13:26:09.528 [24220:20316:1023/132609.528:ERROR:interface_endpoint_client.cc(702)] Message 0 rejected by interface blink.mojom.WidgetHost
+10월 23, 2023 13:26:21.67 [24220:20316:1023/132621.067:ERROR:interface_endpoint_client.cc(702)] Message 0 rejected by interface blink.mojom.WidgetHost

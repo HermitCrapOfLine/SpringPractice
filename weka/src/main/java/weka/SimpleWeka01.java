@@ -5,8 +5,7 @@ import java.io.FileReader;
 import java.util.Random;
 
 import weka.classifiers.Evaluation;
-import weka.classifiers.rules.DecisionTable;
-import weka.classifiers.trees.J48;
+import weka.classifiers.trees.RandomForest;
 import weka.core.Instances;
 
 public class SimpleWeka01 {
@@ -19,17 +18,16 @@ public class SimpleWeka01 {
 		Instances data = new Instances (
 					new BufferedReader(
 							new FileReader("c:/temp/titanic_pre.arff"))
-				);
-		
+				);		
 		Instances train = data.trainCV(numfolds,  numfold, new Random(seed));
 		Instances test = data.testCV(numfolds,  numfold);
 		
 		train.setClassIndex(train.numAttributes()-1);
 		test.setClassIndex(train.numAttributes()-1);
 		
-//		RandomForest model = new RandomForest();
+		RandomForest model = new RandomForest();
 //		DecisionTable model = new DecisionTable();
-		J48 model = new J48();  //SVM
+//		J48 model = new J48();  //SVM
 
 		Evaluation eval = new Evaluation(train);
 		eval.crossValidateModel(model, train, numfolds, new Random(seed));
