@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 import org.galapagos.domain.AuthVO;
+import org.galapagos.domain.ChangePasswordVO;
 import org.galapagos.domain.MemberVO;
 import org.galapagos.mapper.MemberMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,6 +58,22 @@ public class MemberServiceimpl implements MemberService {
 		}
 
 
+	}
+
+	@Override
+	public boolean changePassword(ChangePasswordVO vo) {
+		MemberVO member = mapper.read(vo.getUsername()); // 데이터 베이스에 저장되 있는 멤버 변수 찾음
+		
+		if(!pwEncoder.matches(vo.getOrgPassword(), member.getPassword())) {
+			// 비밀번호 오류
+			return false;
+		}
+		
+		String encPassword = pwEncoder.encode(vo.getNewPassword());
+		vo.setEncPassword(encPassword);
+		mapper.changePassword(vo);
+		
+		return true;
 	}
 
 }

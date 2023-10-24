@@ -6,6 +6,7 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
+import org.galapagos.domain.ChangePasswordVO;
 import org.galapagos.domain.MemberVO;
 import org.galapagos.service.MemberService;
 import org.galapagos.service.MemberServiceimpl;
@@ -90,5 +91,31 @@ public class SecurityController {
 	@GetMapping("/profile")
 	public void profile() {
 		
+	}
+	
+	@GetMapping("/change_password")
+	public void getChangePassword(ChangePasswordVO vo) {
+		
+	}
+	
+	@PostMapping("/change_password")
+	public String postChangePassword(@Valid ChangePasswordVO vo, Errors errors) {
+		
+		if(!vo.getNewPassword().equals(vo.getNewPassword2())) {
+			
+			errors.rejectValue("newPassword2", "비밀번호 불일치", "비밀번호 확인이 일치하지 않습니다.");
+			
+			return "security/signup";
+		}
+		
+		if(!service.changePassword(vo)) {
+			errors.rejectValue("orgPassword", "이번 비밀번호 불일치", "이전 비밀번호 확인이 일치하지 않습니다.");
+		}
+		
+		if(errors.hasErrors()) {
+			return "security/signup";
+		}
+		
+		return "redirect:/security/profile";
 	}
 }

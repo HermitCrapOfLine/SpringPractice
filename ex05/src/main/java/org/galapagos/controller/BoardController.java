@@ -132,4 +132,5 @@ public class BoardController {
 		service.removeAttachment(no);
 		return "OK";
 	}
+	
 }

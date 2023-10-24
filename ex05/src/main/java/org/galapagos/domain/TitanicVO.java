@@ -16,7 +16,6 @@ public class TitanicVO {
 	private double class2;
 
 	
-	
 	public Instance toInstance() {
 		double[] values = {sex, age, sibsp, fare, class3, class1, class2};
 		return new DenseInstance(1, values);
